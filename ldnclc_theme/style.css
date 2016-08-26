@@ -1,0 +1,914 @@
+/*
+Theme Name: ldnclc_theme
+Theme URI: http://londonclc.org.uk/
+Author: Joe Halloran
+Author URI: http://underscores.me/
+Description: Custom Theme for London CLC
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ldnclc_theme
+Tags:
+*/
+
+@import url('css/bootstrap.min.css');
+
+
+.cpd-sidebar.affix-top {
+    width: 100%;
+}
+
+.cpd-sidebar.affix {
+    width: 16.66666667%;
+
+}
+
+.cpd-sidebar.affix-top > .cpd-nav {
+    margin-right: 0px;
+}
+
+.cpd-sidebar.affix > .cpd-nav {
+    margin-right: 40px;
+}
+
+
+.cpd-nav {
+
+    border-radius: 8px;
+
+    background-color: #337AB7;
+    padding: 5px;
+}
+
+.cpd-nav a {
+    color: white;
+    font-size: 18px;
+    padding-right: 3px;
+}
+
+.cpd-nav > div > li {
+
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    /*margin-right: 10px;*/
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+    /*border-radius: 8px;*/
+    border-color: white;
+    /*background-color: #337AB7;*/
+
+
+}
+
+.cpd-nav > div > li > a {
+    color: white;
+    font-size: 14px;
+}
+
+.help-sheet {
+    margin-bottom: 40px;
+}
+
+.help-sheet > a > img {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #BDBDBD;
+}
+
+/* Spacing for Yrs column in pupil workshop tables */
+.years-column {
+    min-width: 50px;
+}
+
+/* Spacing for Workshop column in pupil workshop tables */
+.workshop-column {
+    width: 38%;
+}
+
+.about-us-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+    max-height: 60px;
+    margin-left: 10px;
+}
+
+/* Set breadcrumb background to white */
+.breadcrumb {
+    background-color: white;
+}
+
+/* Header on services pages */
+.services-header {
+    font-size:45px; 
+    border-bottom: none;
+}
+
+/* Contact us thumbnail */
+.services-contact-img {
+    max-width: 100px;
+}
+
+@media (min-width: 992px) {
+    /* Contact us thumbnail */
+    .services-contact-img {
+        max-width: 125px;
+    }
+    /* Font size of contact us text on side bar*/
+    .service-contact-side-bar {
+        font-size: 14px !important;
+    }
+}
+
+/* Font size of contact us text on servicesside bar*/
+.service-contact-side-bar {
+    font-size: 12px;
+}
+
+/* Sizing of feature image on services pages */
+.services-feature-image {
+    max-width: 90%;
+}
+ /*Empty class for new services layout subtitles - change colour, etc...*/
+.services-subtitle {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Reduce padding for hr on services pages*/
+.services-hr {
+     margin-top: 5px; 
+     margin-bottom: 5px;
+     margin-right: 10px;
+     margin-left: 10px;
+}
+
+/* Positioning of coloured asterisks on services pages*/
+.services-asterisk {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/* Positioning and styling of services list titles (that follow asterisks) */
+.services-list-heading {
+    font-weight: 400;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 55px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+/* Styling of social logos on right hand of services pages */
+.services-right-social-logo {
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 50px;
+    color: #3E3E42;
+}
+
+/* Empty class for styling services drop-downs */
+.services-dropdown {
+}
+
+/* Styling of list items in services dropdowns*/
+.services-dropdown > .collapse > li, .services-dropdown > .collapsing > li {
+    margin-left: 55px;
+    margin-top: 7px;
+    /*list-style-type: disc;*/
+}
+
+/* Bottom spacing for service drop down lists*/
+.services-dropdown > .collapse, .services-dropdown > .collapsing {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Fixing height for top banner on Venue hire so scroll affix height for side bars can be set */
+.banner-top-image {
+    width: 100%;
+    height: 100px;
+    background: url(images/clapham-740x154.jpg) no-repeat center 60%;
+    background-size: cover;
+}
+
+@media (min-width: 1200px) {
+    .venue-room-title {
+        min-height: 78px;
+    }
+    .venue-room-title-two {
+        min-height: 52px;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-top-image {
+    width: 100%;
+    height: 180px;
+    background: url(images/clapham-740x154.jpg) no-repeat center 40%;
+    background-size: cover;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner-top-image {
+    width: 100%;
+    height: 180px;
+    background: url(images/clapham-940x196.jpg) no-repeat center 60%;
+    background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner-top-image {
+    width: 100%;
+    height: 180px;
+    background: url(images/clapham1200x250.jpg) no-repeat center 60%;
+    background-size: cover;
+    }
+}
+
+.footer-link-list {
+    padding-left: 0px
+}
+
+.footer-link-list > li {
+    list-style-type: none;
+}
+
+.index-page-quote { 
+    font-size: 28px;
+}
+
+@media (min-width: 768px) {
+    /* Block quote on index page*/
+    .index-page-quote { 
+        font-size: 36px;
+    }
+}
+.follow-us-banner-text {
+    color: black;
+    text-decoration: none;
+}
+
+.follow-us-banner {
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.follow-us-banner:hover > a > .follow-us-banner-text, 
+.follow-us-banner:focus > a > .follow-us-banner-text, 
+.follow-us-banner:hover > a > .follow-us-banner-icon, 
+.follow-us-banner:focus > a > .follow-us-banner-icon,
+.follow-us-banner:hover > a:hover, 
+.follow-us-banner:focus > a:hover {
+    text-decoration: none;
+    color: #2d6cb5; /*clc-dark-blue*/
+}
+
+
+.page-footer {
+    padding: 50px 0;
+    background-color: #3E3E42 !important; /*#5B5B61*/
+    /*margin-top: 50px;*/
+}
+/*
+@media (min-width: 768px) {
+    .page-footer  {
+    margin-top: 100px;
+    }    
+}*/
+
+/* Display logos in rows */
+.footer-social-logo {
+    padding: 7px;
+    background-color: white;
+    border-radius: 50px;
+    color: #3E3E42;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 3px;
+    max-height: 35px;
+    margin-bottom: 27px;
+}
+
+/* Set footer text to white and thin*/
+.footer-text {
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(images/girls_with_microphone-767.jpg) no-repeat 35% center;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .intro-header {
+        background: url(images/girls_with_microphone-991.jpg) no-repeat center 10%;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro-header {
+        background: url(images/girls_with_microphone-1199.jpg) no-repeat center 10%;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro-header {
+        background: url(images/girls_with_microphone1772.jpg) no-repeat center 10%;
+        background-size: cover;
+    }
+}
+
+.course-attend-icon {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    line-height: 45px;
+    text-align: right;
+}
+
+.course-attend-text {
+    /*font-weight: 300;*/
+    /*font-size: 18px;*/
+    /*color: #333;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*display: inline-block;*/
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+.thin-title {
+    font-weight: 300;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 60%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.tfl-box {
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .tfl-box{
+        text-align: right;
+    }
+}
+
+.tech-support-hr {
+     margin-top: 0px; 
+     margin-bottom: 0px;
+}
+
+.tech-support-box {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+.tech-support-title  {
+    font-weight: 300;
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    padding-left: 55px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+a > .tech-support-box > .tech-support-title:hover, a > .tech-support-box > .tech-support-title:focus {
+    color: #337ab7;
+}
+
+.tech-support-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /*background-color: whitesmoke;*/
+    /*border-radius: 50px;*/
+}
+
+.services-text {
+    font-weight: 400;
+    margin-bottom: 30px;    
+}
+
+.services-box {
+    background-color: whitesmoke;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    margin-bottom: 40px;
+    margin-top: 2px;
+    box-shadow: 0 1px 2px #fff, /*bottom external highlight*/ 0 -1px 1px #666, /*top external shadow*/ inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+
+}
+
+.services-panel {
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.services-icon {
+    display: none;
+}
+
+
+
+.services-title {
+    width: 95%;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+@media (min-width: 768px) {
+    .services-title {
+        font-size: 26px;
+        padding-top: 9px;
+        padding-bottom: 7px;
+        padding-left: 55px;
+        text-align: left;
+}
+    .services-icon {
+    display: inherit;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+}
+}
+
+
+/* Vertical spacing class 10px */
+.spacer10 {
+    height: 10px;
+}
+
+/* Vertical spacing class 20px */
+.spacer20 {
+    height: 20px;
+}
+
+/* Vertical spacing class 50px */
+.spacer50 {
+    height: 50px;
+}
+
+/* Set padding and border colour for date-time box in CPD boxes */
+.cpd-date-box {
+    padding: 8px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+/* Setting for the date-time text in CPD boxes */
+.cpd-date {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+/* Set colour and gradient of CPD month headings */
+.cpd-term {
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 4px;
+    /*background-color: #4a8ecc;*/
+    /*background-color: #91d9f8;*/
+    background-color: #2d6cb5;
+    /*background-color: #76d1f7;*/
+    margin-bottom: 50px;
+    /*background: -webkit-linear-gradient(right , #F5F5F5 , #F9F9F9, #FFFFFF); /* For Safari 5.1 to 6.0 */*/
+    /*background: -o-linear-gradient(right , #F5F5F5 , #F9F9F9, #FFFFFF); /* For Opera 11.1 to 12.0 */*/
+    /*background: -moz-linear-gradient(right , #F5F5F5 , #F9F9F9, #FFFFFF); /* For Firefox 3.6 to 15 */*/
+    /*background: linear-gradient(to right, #F5F5F5 , #F9F9F9, #FFFFFF); /* Standard syntax */*/
+}
+
+/*Remove hover underline from CPD collapse Main term headings*/
+a.cpd-term-title:hover, a.cpd-term-title:focus {
+    text-decoration: none;
+}
+
+.cpd-term-title.collapsed > .cpd-term {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Set color of CPD Term heading dates */
+.cpd-term > small {
+    color: #FFFFFF;
+}
+
+/* Give the dropdown Caret the correct spacing */
+.cpd-term > .caret {
+    margin-left: 20px;
+}
+
+
+
+/* Space out terms on CPD side menu*/
+.cpd-nav {
+    margin-bottom: 5px
+}
+
+/* Indent cpd side sub-menu items */
+.cpd-nav li {
+    padding-left: 10px;
+}
+
+/*Additional spacing in between "More info" and "book now" buttons.*/
+.cpd-button {
+    margin-right: 10px
+}
+
+.cpd-box-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 36px;
+    text-align: center;
+    /*background-color: whitesmoke;*/
+    /*border-radius: 50px;*/
+}
+
+/* Fixes the way date and time line break in CPD Boxes */
+span.cpd-date-avoidwrap { display:inline-block; }
+
+.breadcrumb {
+    font-size: 14px;
+}
+
+.clc-col {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* THIS IS ONLY NECESSARY FOR ORIGINAL PLAIN COURSE DESIGN (PRE 2nd Augsut*/
+/*.courses-box {
+    padding-top: 25px;
+}*/
+
+.cpd-title {
+    padding-left: 17px;
+}
+
+
+.cpd-preview-text {
+    padding-top: 10px;
+}
+
+.cpd-box {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border-color: #E6E6E6;
+    /*min-height: 230px; */
+
+}
+
+.clc-box {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border-color: #E6E6E6;
+}
+
+/* CLC colour scheme */
+.clc-blue {
+    border-color: #2d6cb5;
+    color: #4a8ecc;
+}
+
+.clc-dark-blue {
+    color: #2d6cb5;
+}
+
+.clc-light-blue {
+    color: #76d1f7;
+}
+
+.clc-extra-light-blue {
+    color: #91d9f8;
+}
+
+.clc-green {
+    border-color: #12b259;
+    color: #9cd3a8;
+}
+
+.clc-dark-green {
+    color: #00a156;
+}
+
+.clc-light-green {
+    color: #a1ce57;
+}
+
+.clc-orange {
+    border-color: #f99f38;
+    color: #f36c42;
+}
+
+.clc-dark-orange {
+    color: #f04b4a;
+}
+
+.clc-deep-orange {
+    color: #f99f38;
+}
+
+.clc-light-orange {
+    color: #fec14d;
+}
+
+/* END CLC colour scheme */
+
+
+.img-center {
+    margin: 0 auto;
+}
+
+.team-page-spacing {
+    margin-top: 20px;
+}
+
+.team-modal-image {
+    max-width: 50%;
+    float:left; 
+    margin-right:10px; 
+    margin-bottom:10px;
+}
+
+.affix {
+  top: 70px;
+}
+
+.cpd-sidebar > .nav > li > a {
+    padding: 2px;
+}
+
+.vertical-align {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;			   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.home-page-special-vertical-align {
+    display: block;
+}
+
+@media(min-width:768px) {
+    .home-page-special-vertical-align {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	    display: -ms-flexbox;      /* TWEENER - IE 10 */
+	    display: -webkit-flex;     /* NEW - Chrome */
+	    display: flex;		   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	    -webkit-align-items: center;
+        align-items: center;
+    }
+}
+
+
+.home-box:hover img {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+*/
+/* END OF JOES ADDITIONS*/
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #FFFFFF;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.content-section-c {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(/images/IMG_7203_crop.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    /*font-size: 3em;*/
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:991px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        /*font-size: 3em;*/
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+
+p.copyright {
+    margin: 15px 0 0;
+}

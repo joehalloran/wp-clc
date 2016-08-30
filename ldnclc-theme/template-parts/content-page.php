@@ -10,10 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
+	
 	<div class="entry-content">
 		<?php
 			the_content();
@@ -32,7 +29,7 @@
 					sprintf(
 						/* translators: %s: Name of current post */
 						esc_html__( 'Edit %s', 'ldnclc_theme' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						the_title( '<span class="sr-only">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
 					'</span>'

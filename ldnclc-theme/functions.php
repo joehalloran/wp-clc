@@ -48,6 +48,20 @@ function ldnclc_setup() {
 
 	load_theme_textdomain( 'ldnclc', get_template_directory() . '/languages' );
 
+	/*
+	 * Enable html5 on comments.
+	 *
+	 * https://github.com/ediamin/wp-bootstrap-comment-walker
+	 */
+
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption', 
+	) );
+
 
 
 }
@@ -69,10 +83,9 @@ function get_breadcrumbs() {
  	
  	// Add home link
 	$trail = '<li><a href="' . home_url() . '">Home</a></li>';
-	// If single post add link to blog roll
-	$trail .= ( is_single() ) ? '<li><a href="' . get_permalink( get_option( 'page_for_posts') ) . '">Blog</a></li>' : '' ;
-	$page_title = get_the_title($post->ID);
- 
+	// If is post (or cat or archive or search) add link to blog roll
+	$trail .= ( is_single() || is_category() || is_tax() || is_archive() || is_search() ) ? '<li><a href="' . get_permalink( get_option( 'page_for_posts') ) . '">Blog</a></li>' : '' ;
+	 
  	// Get all parent pages
 	if($post->post_parent) {
 		$parent_id = $post->post_parent;
@@ -88,7 +101,7 @@ function get_breadcrumbs() {
 	}
  
  	// Add current page
-	$trail .= '<li class="active">'.$page_title.'</li>';
+	$trail .= '<li class="active">'.ldnclc_get_page_title().'</li>';
 	$trail .= '';
  
 	return $trail;	
@@ -102,6 +115,10 @@ function get_breadcrumbs() {
 require_once('inc/wp_bootstrap_navwalker.php');
 require_once('inc/bootstrap-custom-menu-widget.php');
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Register Custom Navigation Walker include custom menu widget to use walkerclass
@@ -113,9 +130,44 @@ register_nav_menus(
     )
 );
 
+
+
 /**
- * Custom template tags for this theme.
+ * Registers a widget area.
+ *
+ * 
  */
-require get_template_directory() . '/inc/template-tags.php';
+function ldnclc_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar-1', 'ldnclc' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'ldnclc' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'ldnclc_widgets_init' );
+
+
+function ldnclc_get_page_title() {
+	if ( is_home() && ! is_front_page() ) { 
+        return single_post_title('', FALSE);
+    } elseif ( is_category() or is_tax() ) {
+        return single_cat_title('', FALSE);
+    } elseif ( is_archive() ) {
+       return __( 'Archive ', 'ldnclc' ). '<small>' . esc_html( get_the_archive_title() ) . '</small>' ;
+    } elseif ( is_post_type_archive() ) {
+        return post_type_archive_title();
+    } elseif ( is_search() ) {
+        return  __( 'Search Results for: ', 'ldnclc' ). '<small>' . esc_html( get_search_query() ) . '</small>' ;
+    } 
+    elseif ( is_404() ) {
+    	return "Err... something's not right here";
+    }else {
+        return get_the_title(); 
+    } 
+}
 
 ?>

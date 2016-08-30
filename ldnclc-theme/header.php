@@ -21,8 +21,19 @@
 	    <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
 	    <link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php wp_head(); ?>
-</head>
+	    <?php
+	    if ( is_admin_bar_showing() ) {
+	        ?>
+	          <style>
+	          .navbar-fixed-top {
+	            margin-top: 32px;
+	          }
+	          </style>
+        <?php
+	    }
+	    ?>
+		<?php wp_head(); ?>
+	</head>
 
 <body>
 
@@ -36,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="index.html">London CLC</a>
+                <a class="navbar-brand topnav" href="<?php echo site_url(); ?>">London CLC</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 

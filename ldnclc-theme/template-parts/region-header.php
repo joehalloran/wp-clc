@@ -8,12 +8,7 @@
     </div>
     <div class="col-md-12">
        <h1 class="page-header services-header"">
-            <?php 
-            if ( is_home() && ! is_front_page() ) { 
-                single_post_title(); 
-            } else {
-                the_title(); 
-            } ?>
+            <?php echo ldnclc_get_page_title(); ?>
         </h1>
     </div>
 </div>

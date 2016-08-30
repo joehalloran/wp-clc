@@ -23,12 +23,13 @@ get_header(); ?>
             <!-- /.row -->
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
 
 				<?php
 				if ( have_posts() ) :
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
+						echo get_post_format();
 
 						/*
 						 * Include the Post-Format-specific template for the content.
@@ -36,6 +37,7 @@ get_header(); ?>
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'template-parts/content', get_post_format() );
+
 
 					endwhile;
 
@@ -47,6 +49,9 @@ get_header(); ?>
 
 				endif; ?>
 
+				</div>
+				<div class="col-md-4">
+					<?php get_sidebar(); ?>
 				</div>
             </div>
         </div>

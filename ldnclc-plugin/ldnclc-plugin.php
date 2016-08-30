@@ -13,7 +13,7 @@
  * @package           ldnclc_plugin
  *
  * @wordpress-plugin
- * Plugin Name:       WordPress Plugin Boilerplate
+ * Plugin Name:       London CLC Plugin
  * Plugin URI:        http://example.com/ldnclc-plugin-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
@@ -34,22 +34,22 @@ if ( ! defined( 'WPINC' ) ) {
  * The code that runs during plugin activation.
  * This action is documented in includes/class-ldnclc-plugin-activator.php
  */
-function activate_plugin_name() {
+function activate_ldnclc_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-ldnclc-plugin-activator.php';
-	Plugin_Name_Activator::activate();
+	ldnclc_plugin_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-ldnclc-plugin-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_ldnclc_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-ldnclc-plugin-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+	Ldnclc_Plugin_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, 'activate_ldnclc_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_ldnclc_plugin' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -66,10 +66,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-ldnclc-plugin.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function run_ldnclc_plugin() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Ldnclc_Plugin();
 	$plugin->run();
 
 }
-run_plugin_name();
+run_ldnclc_plugin();

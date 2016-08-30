@@ -115,22 +115,103 @@ get_header(); ?>
                    
                     <h2 class="services-subtitle">Pricing</h2>
                     <div class="spacer10"></div>
-                    <table class="table table-bordered table-hover table-responsive">
-                        <thead>
-                            <tr><th>Package Level</th><th>Bronze</th><th>Silver</th><th>Gold</th><th>Platinum</th></tr>
-                        </thead>
-                        <tr><td>CPD - Twilight - Whole school staff</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
-                        <tr><td>CPD - Half-day in school - Whole school staff</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
-                        <tr><td>Pupils/Students: Half-day at CLC for Whole Class</td><td>5</td><td>1</td><td>2</td><td>2</td></tr>
-                        <tr><td>Pupils/Students: Full-day at CLC for whole Class</td><td>0</td><td>4</td><td>4</td><td>6</td></tr>
-                        <tr><td>Technology Loans</td><td>3</td><td>3</td><td>4</td><td>5</td></tr>
-                        <tr><td>Half-day consultancy</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
-                        <tr><td>Half-day, CLC based CPD - Single Attendee  </td><td>4</td><td>5</td><td>6</td><td>6</td></tr>
-                        <tr><td>Full-day, CLC based CPD - Single Attendee</td><td>4</td><td>5</td><td>6</td><td>6</td></tr>
-                        <tr><td>Access to newsletters, tutorials, help sheets and other teaching materials.</td><td>No Charge</td><td>No Charge</td><td>No Charge</td><td>No Charge</td></tr>
-                        <tr><td>General Advice- email or telephone</td><td>No Charge</td><td>No Charge</td><td>No Charge</td><td>No Charge</td></tr>
-                        <tr><td><strong>COST</strong></td><td><strong>£3,275</strong></td><td><strong>£4,425</strong></td><td><strong>£5,575</strong></td><td><strong>£6,800</strong></td></tr>
-                    </table> 
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Package Level</th>
+                                    <th>Bronze</th>
+                                    <th>Silver</th>
+                                    <th>Gold</th><
+                                    th>Platinum</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Activity</td>
+                                <td>*Single form only</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CPD - Twilight - Whole school staff</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>CPD - Half-day in school - Whole school staff</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Pupils/Students Half-day at CLC for Whole Class</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>2 </td>
+                            </tr>
+                            <tr>
+                                <td>Pupils/Students Full-day at CLC for whole Class</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Technology Loans</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Half-day consultancy</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Half-day, CLC based CPD - up to 2 per CPD </td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                            </tr>
+                            <tr>
+                                <td>Full-day, CLC based CPD - up to 2 per CPD</td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                                <td>Unlimited </td>
+                            </tr>
+                            <tr>
+                                <td>Access to newsletters, tutorials, help sheets and other teaching materials.</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                            </tr>
+                            <tr>
+                                <td>General Advice- email or telephone</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                                <td>No Charge</td>
+                            </tr>
+                            <tr>
+                                <td><strong>COST</strong></td>
+                                <td><strong>&pound;3350</strong></td>
+                                <td><strong>&pound;4550</strong></td>
+                                <td><strong>&pound;5725</strong></td>
+                                <td><strong>&pound;6950</strong></td>
+                            </tr>
+                        </table>
+                    </div> 
                 </div>
                 <div class="col-md-2 hidden-xs hidden-sm">
                   <?php get_template_part( 'template-parts/sidebar', 'social' );?>

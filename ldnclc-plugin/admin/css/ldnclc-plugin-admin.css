@@ -7,3 +7,29 @@
 	margin-top: 50px;
 	margin-bottom: -10px;
 }
+
+button .dashicons-no {
+ 	margin-top: 3px;
+ 	color: red;
+}
+
+button:disabled .dashicons-no {
+	color: #ddd;
+}
+
+#ldnclc-materials > .help-text{
+	margin-bottom: -10px;
+}
+
+#link-text-help,
+#link-help {
+    font-size: 16px;
+}
+
+#link-text-help {
+	margin-left: 4px;
+}
+
+#link-help {
+	margin-left: 100px;
+}

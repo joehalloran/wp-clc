@@ -75,6 +75,7 @@ class Ldnclc_Plugin {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_metabox_hooks();
+		$this->define_metabox_save_hooks();
 		$this->define_public_hooks();
 
 	}
@@ -115,9 +116,15 @@ class Ldnclc_Plugin {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-ldnclc-plugin-admin.php';
 
 		/**
-		 * The class responsible for defining all actions relating to metaboxes.
+		 * The class responsible for defining all actions relating to creating metaboxes.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-ldnclc-plugin-admin-metabox.php';
+
+
+		/**
+		 * The class responsible for defining all actions relating to saving metaboxes.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-ldnclc-plugin-admin-save-metabox.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -163,6 +170,9 @@ class Ldnclc_Plugin {
 		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_workshop' );
 		$this->loader->add_action( 'init', $plugin_admin, 'new_taxonomy_workshop' );
 
+		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_teacher_cpd' );
+		$this->loader->add_action( 'init', $plugin_admin, 'new_taxonomy_teacher_cpd' );
+
 	}
 
 
@@ -176,9 +186,21 @@ class Ldnclc_Plugin {
 		$plugin_metaboxes = new Ldnclc_Plugin_Admin_Metaboxes( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'add_meta_boxes', $plugin_metaboxes, 'ldnclc_plugin_add_metaboxes' );
-		$this->loader->add_action( 'save_post', $plugin_metaboxes, 'ldnclc_plugin_meta_save' );
 
-	} 
+	}
+
+	/**
+	 * Register all of the hooks related to saving metaboxes
+	 *
+	 * @since 		1.0.0
+	 * @access 		private
+	 */
+	private function define_metabox_save_hooks() {
+		$plugin_save_metaboxes = new Ldnclc_Plugin_Admin_Save_Metaboxes( $this->get_plugin_name(), $this->get_version() );
+
+		$this->loader->add_action( 'save_post', $plugin_save_metaboxes, 'ldnclc_plugin_meta_save' );
+ 	}
+
 	/**
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.

@@ -67,20 +67,30 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	    );
 
 	    add_meta_box(
-	        'pupil-workshop-what-next', //id
-	        __( 'Pupil Workshop What Next', 'ldnclc-plugin' ), //title
-	        array( $this, 'ldnclc_plugin_metabox_pupil_workshop_what_next' ), //callback
-	        'pupil_workshop', //post_type
+	        'teachers-cpd-key-info', //id
+	        __( 'Teacher CPD Key Info', 'ldnclc-plugin' ), //title
+	        array( $this, 'ldnclc_plugin_metabox_teacher_cpd_key_info' ), //callback
+	        'teacher_cpd', //post_type
+	        'side', //context
+	        'low', // priority
+	        array() // callback args
+	    );
+
+	    add_meta_box(
+	        'ldnclc-outcomes', //id
+	        __( 'Session outcomes', 'ldnclc-plugin' ), //title
+	        array( $this, 'ldnclc_plugin_metabox_outcomes' ), //callback
+	        array('pupil_workshop','teacher_cpd'), //post_type
 	        'normal', //context
 	        'low', // priority
 	        array() // callback args
 	    );
 
 	    add_meta_box(
-	        'pupil-workshop-materials', //id
-	        __( 'Pupil Workshop Materials', 'ldnclc-plugin' ), //title
-	        array( $this, 'ldnclc_plugin_metabox_pupil_workshop_materials' ), //callback
-	        'pupil_workshop', //post_type
+	        'ldnclc-plugin-materials', //id
+	        __( 'Materials', 'ldnclc-plugin' ), //title
+	        array( $this, 'ldnclc_plugin_metabox_materials' ), //callback
+	        array('pupil_workshop','teacher_cpd') , //post_type
 	        'normal', //context
 	        'low', // priority
 	        array() // callback args
@@ -103,6 +113,28 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	    include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/ldnclc-plugin-metabox-workshop-key-info.php';
 	}
 
+	
+
+	/**
+	 * Generates metabox content for teacher cpd key info
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 * @return 	void
+	 */
+	public function ldnclc_plugin_metabox_teacher_cpd_key_info( $post ) {
+	    $courseCode = get_post_meta( $post->ID , 'teacher-cpd-key-info-code', true);
+	    $courseLocation = get_post_meta( $post->ID , 'teacher-cpd-key-info-location', true);
+	    $courseLocationOther = get_post_meta( $post->ID , 'teacher-cpd-key-info-location-other', true);
+	    $courseDate	= get_post_meta( $post->ID , 'teacher-cpd-key-info-date', true);
+	    $courseStartTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-start-time', true);
+	    $courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
+	    $courcePrice = get_post_meta( $post->ID , 'teacher-cpd-key-info-price', true);
+	    $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', true);
+
+	    include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/ldnclc-plugin-metabox-teacher-cpd-key-info.php';
+	}
+
 	/**
 	 * Generates metabox content for pupil workshop what next
 	 *
@@ -110,37 +142,38 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	 * @access 	public
 	 * @return 	void
 	 */
-	public function ldnclc_plugin_metabox_pupil_workshop_what_next( $post ) {
-	    $workshopWhatNext = get_post_meta( $post->ID , 'pupil-workshop-what-next', true);
+	public function ldnclc_plugin_metabox_outcomes( $post ) {
+	    $outcomes = get_post_meta( $post->ID , 'ldnclc-outcomes', true);
 	    		
-		echo "<h4>What next point 1: </h4>";
+		echo "<h4>Item 1: </h4>";
 
-		wp_editor( $content = $workshopWhatNext[0], $editor_id = "pupil-workshop-what-next-0", $settings = array(
-			'textarea_name' => 'pupil-workshop-what-next[0]',
+		wp_editor( $content = $outcomes[0], $editor_id = "ldnclc-outcomes-0", $settings = array(
+			'textarea_name' => 'ldnclc-outcomes[0]',
 			'textarea_rows' => 2,
 			'teeny' => TRUE,
 			'media_buttons' => FALSE,
 		) );
 
-		echo "<h4>What next point 2: </h4>";
+		echo "<h4>Item 2: </h4>";
 
-		wp_editor( $content = $workshopWhatNext[1], $editor_id = "pupil-workshop-what-next-1", $settings = array(
-			'textarea_name' => 'pupil-workshop-what-next[1]',
+		wp_editor( $content = $outcomes[1], $editor_id = "ldnclc-outcomes-1", $settings = array(
+			'textarea_name' => 'ldnclc-outcomes[1]',
 			'textarea_rows' => 2,
 			'teeny' => TRUE,
 			'media_buttons' => FALSE,
 		) );
 
-		echo "<h4>What next point 3: </h4>";
+		echo "<h4>Item 3: </h4>";
 
-		wp_editor( $content = $workshopWhatNext[2], $editor_id = "pupil-workshop-what-next-2", $settings = array(
-			'textarea_name' => 'pupil-workshop-what-next[2]',
+		wp_editor( $content = $outcomes[2], $editor_id = "ldnclc-outcomes-2", $settings = array(
+			'textarea_name' => 'ldnclc-outcomes[2]',
 			'textarea_rows' => 2,
 			'teeny' => TRUE,
 			'media_buttons' => FALSE,
 		) );
 
 	}
+
 
 	/**
 	 * Generates metabox content for pupil workshop key info
@@ -149,7 +182,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	 * @access 	public
 	 * @return 	void
 	 */
-	public function ldnclc_plugin_metabox_pupil_workshop_materials( $post ) {
+	public function ldnclc_plugin_metabox_materials( $post ) {
 	    $materials = get_post_meta( $post->ID , 'ldnclc-materials');
 		
 		include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/ldnclc-plugin-metabox-materials.php';

@@ -347,17 +347,24 @@ Tags:
 }
 
 .course-attend-text {
-    /*font-weight: 300;*/
-    /*font-size: 18px;*/
-    /*color: #333;*/
     margin-top: 0px;
     margin-bottom: 0px;
-    /*display: inline-block;*/
     padding-left: 20px;
     padding-top: 7px;
     padding-bottom: 7px;
 }
 
+.materials-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.materials-text .glyphicon {
+    color: #9cd3a8;
+}
 
 .thin-title {
     font-weight: 300;
@@ -764,7 +771,7 @@ html {
 
 body {
     font-size: 16px;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Ubuntu", "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 p {

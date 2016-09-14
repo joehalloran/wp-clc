@@ -15,6 +15,7 @@ function ldnclc_scripts() {
 	wp_enqueue_style( 'ldnclc-style', get_stylesheet_uri() );
 	// Load google fonts stylesheet.
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' );
+	wp_enqueue_style( 'google-fonts-two', 'http://fonts.googleapis.com/css?family=Ubuntu' );
 	
 }
 add_action( 'wp_enqueue_scripts', 'ldnclc_scripts' );
@@ -84,7 +85,12 @@ function get_breadcrumbs() {
  	// Add home link
 	$trail = '<li><a href="' . home_url() . '">Home</a></li>';
 	// If is post (or cat or archive or search) add link to blog roll
-	$trail .= ( is_single() || is_category() || is_tax() || is_archive() || is_search() ) ? '<li><a href="' . get_permalink( get_option( 'page_for_posts') ) . '">Blog</a></li>' : '' ;
+
+	if ( is_singular( 'teacher_cpd' ) ) {
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'teacher_cpd' ) . '">Courses</a></li>';
+	} elseif  ( is_single() || is_category() || is_tax() || is_archive() || is_search() ) {
+		$trail .= '<li><a href="' . get_permalink( get_option( 'page_for_posts') ) . '">Blog</a></li>';
+	}
 	 
  	// Get all parent pages
 	if($post->post_parent) {
@@ -168,6 +174,28 @@ function ldnclc_get_page_title() {
     }else {
         return get_the_title(); 
     } 
+}
+
+/**
+ * Standard date format
+ *
+ * 
+ */
+function ldnclc_format_date($date) {
+	$formatDate = strtotime($date);
+	$output = date('D jS M Y', $formatDate);
+	return $output;
+}
+
+/**
+ * Standard time format
+ *
+ * 
+ */
+function ldnclc_format_time($time) {
+	$formatTime = strtotime($time);
+	$output = date('g:i A', $formatTime);
+	return $output;
 }
 
 ?>

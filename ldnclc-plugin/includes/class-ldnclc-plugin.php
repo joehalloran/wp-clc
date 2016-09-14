@@ -167,11 +167,10 @@ class Ldnclc_Plugin {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Create custom post type and taxonomies
 		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_workshop' );
-		$this->loader->add_action( 'init', $plugin_admin, 'new_taxonomy_workshop' );
-
 		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_teacher_cpd' );
-		$this->loader->add_action( 'init', $plugin_admin, 'new_taxonomy_teacher_cpd' );
+		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_resources' );
 
 	}
 

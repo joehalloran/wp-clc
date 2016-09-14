@@ -37,9 +37,10 @@
 <!-- Workshop keystage input -->
 <p>
 	<label for="pupil-workshop-key-info-key-stage"><?php _e( 'Workshop key stage: ', 'ldnclc-plugin' );?></label><br />
-	<input type="radio" name="pupil-workshop-key-info-key-stage" <?php echo (($workshopKeyStage == "EYFS") ? 'checked="checked" ' : " ") ;?>value="EYFS"> EYFS<br />
-  	<input type="radio" name="pupil-workshop-key-info-key-stage" <?php echo(($workshopKeyStage == "KS1") ? 'checked="checked" ' : " ") ;?> value="KS1"> KS1<br />
-  	<input type="radio" name="pupil-workshop-key-info-key-stage" <?php echo(($workshopKeyStage == "Lower KS2") ? 'checked="checked" ' : " ") ;?> value="Lower KS2"> Lower KS2<br />
-  	<input type="radio" name="pupil-workshop-key-info-key-stage" <?php echo(($workshopKeyStage == "Upper KS2") ? 'checked="checked" ' : " ") ;?> value="Upper KS2"> Upper KS2<br />
-  	<input type="radio" name="pupil-workshop-key-info-key-stage" <?php echo(($workshopKeyStage == "KS2") ? 'checked="checked" ' : " ") ;?> value="KS2"> KS2<br />
+	<input type="checkbox" name="pupil-workshop-key-info-key-stage[]" <?php echo ((in_array( "EYFS", $workshopKeyStage)) ? 'checked="checked" ' : " ") ;?>value="EYFS"> EYFS<br />
+  	<input type="checkbox" name="pupil-workshop-key-info-key-stage[]" <?php echo ((in_array( "KS1", $workshopKeyStage)) ? 'checked="checked" ' : " ") ;?> value="KS1"> KS1<br />
+  	<input type="checkbox" name="pupil-workshop-key-info-key-stage[]" <?php echo ((in_array( "Lower KS2", $workshopKeyStage)) ? 'checked="checked" ' : " ") ;?> value="Lower KS2"> Lower KS2<br />
+  	<input type="checkbox" name="pupil-workshop-key-info-key-stage[]" <?php echo ((in_array( "Upper KS2", $workshopKeyStage)) ? 'checked="checked" ' : " ") ;?> value="Upper KS2"> Upper KS2<br />
+  	<input type="checkbox" name="pupil-workshop-key-info-key-stage[]" <?php echo ((in_array( "KS2", $workshopKeyStage)) ? 'checked="checked" ' : " ") ;?> value="KS2"> KS2<br />
+
  </p>

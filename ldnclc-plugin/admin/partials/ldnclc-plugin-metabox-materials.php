@@ -18,7 +18,7 @@
 <div id="ldnclc-materials"> 
 	<h3>Materials</h3>
 
-	<span class="help-text"><span id="link-text-help">Link text</span><span id="link-help">Download Link </span></span>
+	<span class="help-text"><span id="link-text-help">Display text</span><span id="link-help">Link </span></span>
 	<?php
 	
 	if ( $materials && !($materials[0] === NULL) ) {  

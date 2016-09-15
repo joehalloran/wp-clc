@@ -16,7 +16,7 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <p>
 	<label for="meta-pupil-workshop-code"><?php _e( 'Workshop code: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="text" name="pupil-workshop-key-info-code" value="<?php echo ( isset ( $workshopCode ) ) ? $workshopCode : " " ;?> " /> 
+	<input type="text" name="pupil-workshop-key-info-code" value="<?php echo ( isset ( $workshopCode ) ) ? esc_html($workshopCode) : " " ;?> " /> 
 </p>
 <!-- Workshop location input -->
 <p>

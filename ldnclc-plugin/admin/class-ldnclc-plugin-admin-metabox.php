@@ -90,7 +90,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	        'ldnclc-plugin-materials', //id
 	        __( 'Materials', 'ldnclc-plugin' ), //title
 	        array( $this, 'ldnclc_plugin_metabox_materials' ), //callback
-	        array('pupil_workshop','teacher_cpd') , //post_type
+	        array('pupil_workshop','teacher_cpd', 'resource') , //post_type
 	        'normal', //context
 	        'low', // priority
 	        array() // callback args

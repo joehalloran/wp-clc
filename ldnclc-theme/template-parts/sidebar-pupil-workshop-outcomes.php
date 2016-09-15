@@ -4,7 +4,7 @@ $outcomes = get_post_meta( $post->ID , 'ldnclc-outcomes', true);
 
 <div class="spacer20"></div>
 <div class="clc-box">
-    <h3>Having attended this course teachers will...</h3>
+    <h3>Things you can do next...</h3>
     <hr class="tech-support-hr">
     <p class="course-attend-text">
     	<span class="clc-green" style="font-size:20px;"><strong>... </strong></span> 

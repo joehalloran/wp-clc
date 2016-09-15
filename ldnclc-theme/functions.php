@@ -87,9 +87,29 @@ function get_breadcrumbs() {
 	// If is post (or cat or archive or search) add link to blog roll
 
 	if ( is_singular( 'teacher_cpd' ) ) {
-		$trail .= '<li><a href="' . get_post_type_archive_link( 'teacher_cpd' ) . '">Courses</a></li>';
+		
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'teacher_cpd' ) . '">Teacher CPD Courses</a></li>';
+		
+	} elseif ( is_singular( 'resource' ) ) {
+		
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'resource' ) . '">Resources</a></li>';
+
+	} elseif ( is_singular( 'pupil_workshop' ) ) {
+		
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'pupil_workshop' ) . '">Pupil workshops</a></li>';
+
+	} elseif ( is_post_type_archive( array( 
+			'pupil_workshop', 
+			'resource',
+			'teacher_cpd'
+		) ) ) {
+
+		// No option here. This is just to exit if section before satisfying condition below and adding "blog" to breadcrumbs.
+		
 	} elseif  ( is_single() || is_category() || is_tax() || is_archive() || is_search() ) {
+		
 		$trail .= '<li><a href="' . get_permalink( get_option( 'page_for_posts') ) . '">Blog</a></li>';
+	
 	}
 	 
  	// Get all parent pages
@@ -162,10 +182,10 @@ function ldnclc_get_page_title() {
         return single_post_title('', FALSE);
     } elseif ( is_category() or is_tax() ) {
         return single_cat_title('', FALSE);
+    } elseif ( is_post_type_archive() ) {
+      return post_type_archive_title('', FALSE);
     } elseif ( is_archive() ) {
        return __( 'Archive ', 'ldnclc' ). '<small>' . esc_html( get_the_archive_title() ) . '</small>' ;
-    } elseif ( is_post_type_archive() ) {
-        return post_type_archive_title();
     } elseif ( is_search() ) {
         return  __( 'Search Results for: ', 'ldnclc' ). '<small>' . esc_html( get_search_query() ) . '</small>' ;
     } 
@@ -184,7 +204,7 @@ function ldnclc_get_page_title() {
 function ldnclc_format_date($date) {
 	$formatDate = strtotime($date);
 	$output = date('D jS M Y', $formatDate);
-	return $output;
+	return esc_html($output);
 }
 
 /**
@@ -195,7 +215,7 @@ function ldnclc_format_date($date) {
 function ldnclc_format_time($time) {
 	$formatTime = strtotime($time);
 	$output = date('g:i A', $formatTime);
-	return $output;
+	return esc_html($output);
 }
 
 ?>

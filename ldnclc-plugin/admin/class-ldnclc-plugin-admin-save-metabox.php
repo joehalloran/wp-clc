@@ -85,17 +85,16 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	 * @return 	void
 	 */
 	protected function ldnclc_plugin_save_pupil_workshop_key_info( $post_id ) {
-		// Checks for input and saves if needed
-		
 		if( isset( $_POST[ 'pupil-workshop-key-info-code' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-code' ]);
-		    update_post_meta( $post_id, 'pupil-workshop-key-info-code', $value );
+			update_post_meta( $post_id, 'pupil-workshop-key-info-code', $value );
 		}
 
 		if( isset( $_POST[ 'pupil-workshop-key-info-location' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-location' ]);
 		    update_post_meta( $post_id, 'pupil-workshop-key-info-location', $value );
 		}
+
 		if( isset( $_POST[ 'pupil-workshop-key-info-duration' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-duration' ]);
 		    update_post_meta( $post_id, 'pupil-workshop-key-info-duration', $value );
@@ -103,8 +102,11 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 
 		if( isset( $_POST[ 'pupil-workshop-key-info-key-stage' ] ) ) {
 			// This is an array;
-			$value = $_POST[ 'pupil-workshop-key-info-key-stage' ];
-		    update_post_meta( $post_id, 'pupil-workshop-key-info-key-stage', $value );
+			$values = $_POST[ 'pupil-workshop-key-info-key-stage' ];
+			foreach ($values as $key => $value) {
+				$values[$key] = sanitize_text_field($value);
+			}
+		    update_post_meta( $post_id, 'pupil-workshop-key-info-key-stage', $values );
 		}
 
 	}
@@ -156,8 +158,11 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 
 		if( isset( $_POST[ 'teacher-cpd-key-info-key-stage' ] ) ) {
 			// This is an array!
-			$value = $_POST[ 'teacher-cpd-key-info-key-stage' ];
-	    	update_post_meta( $post_id, 'teacher-cpd-key-info-key-stage', $value );
+			$values = $_POST[ 'teacher-cpd-key-info-key-stage' ];
+			foreach ($values as $key => $value) {
+				$values[$key] = sanitize_text_field($value);
+			}
+	    	update_post_meta( $post_id, 'teacher-cpd-key-info-key-stage', $values );
 		}
 	}
 

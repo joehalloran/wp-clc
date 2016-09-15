@@ -32,8 +32,8 @@
 
 				?>   
                 <p class="ldnclc-material-item">
-				    <input type="text" name="ldnclc-materials[title][]" class="material-title" <?php echo ($value) ? 'value="'.$value.'"' : 'placeholder="Display text"';  ?>" />
-				    <input type="text" name="ldnclc-materials[media][]" class="material-link" <?php echo ($materialItem['media'][$key]) ? 'value="' . $materialItem['media'][$key] . '"' : 'placeholder="Link"';  ?> />
+				    <input type="text" name="ldnclc-materials[title][]" class="material-title" <?php echo ($value) ? 'value="'.esc_html($value).'"' : 'placeholder="Display text"';  ?>" />
+				    <input type="text" name="ldnclc-materials[media][]" class="material-link" <?php echo ($materialItem['media'][$key]) ? 'value="' . esc_url($materialItem['media'][$key]) . '"' : 'placeholder="Link"';  ?> />
 				    <button class="meta-image-button button"><?php _e( 'Choose or Upload a File', 'ldnclc-plugin' );?></button>
 				    <button class="material-delete-button button"><span class="dashicons dashicons-no"></span></button>
 				    
@@ -46,7 +46,7 @@
 		<p class="ldnclc-material-item">
 		    <input type="text" name="ldnclc-materials[title][]" class="material-title" placeholder="Item Label" />
 		    <input type="text" name="ldnclc-materials[media][]" class="material-link" value="" placeholder="Display text"/>
-		    <button class="meta-image-button button"><?php _e( 'Choose or Upload a File', 'ldnclc-plugin' );?></button>
+		    <button class="meta-image-button button"><?php esc_html_e( 'Choose or Upload a File', 'ldnclc-plugin' );?></button>
 	    	<button class="material-delete-button button"><span class="dashicons dashicons-no"></span></button>
 		</p> 
 	<?php 

@@ -18,7 +18,7 @@
 
 <p>
 	<label for="teacher-cpd-key-info-code"><?php _e( 'Course code: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="text" name="teacher-cpd-key-info-code" value="<?php echo ( isset (  $courseCode  ) ) ?  $courseCode  : " " ;?> " /> 
+	<input type="text" name="teacher-cpd-key-info-code" value="<?php echo ( isset (  $courseCode  ) ) ?  esc_html($courseCode)  : " " ;?> " /> 
 </p>
 <!-- Course location input -->
 <p>
@@ -26,25 +26,25 @@
 	<input type="radio" name="teacher-cpd-key-info-location" <?php echo (($courseLocation == "CLC") ? 'checked="checked" ' : " ") ;?>value="CLC">CLC<br />
 	<input type="radio" name="teacher-cpd-key-info-location" <?php echo (($courseLocation == "In school") ? 'checked="checked" ' : " ") ;?>value="In school">In school<br />
 	<input type="radio" name="teacher-cpd-key-info-location" <?php echo (($courseLocation == "Other") ? 'checked="checked" ' : " ");?> value="Other"> Other 
-	<input type="text" name="teacher-cpd-key-info-location-other" placeholder="Other" value="<?php echo (($courseLocation == "Other") ? $courseLocationOther : " ");?>" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+	<input type="text" name="teacher-cpd-key-info-location-other" placeholder="Other" value="<?php echo (($courseLocation == "Other") ? esc_html($courseLocationOther) : " ");?>" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
   </p>
 		
 <!-- Course time input -->
 <p>
 	<label for="teacher-cpd-key-info-start-time"><?php _e( 'Course start time: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="time" name="teacher-cpd-key-info-start-time" value="<?php echo ( isset (  $courseStartTime  ) ) ? $courseStartTime : " " ;?>" /><br />
+	<input type="time" name="teacher-cpd-key-info-start-time" value="<?php echo ( isset (  $courseStartTime  ) ) ? esc_html($courseStartTime) : " " ;?>" /><br />
 	<label for="teacher-cpd-key-info-end-time"><?php _e( 'Course end time: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="time" name="teacher-cpd-key-info-end-time" value="<?php echo ( isset (  $courseEndTime  ) ) ? $courseEndTime : " " ;?>" /> 
+	<input type="time" name="teacher-cpd-key-info-end-time" value="<?php echo ( isset (  $courseEndTime  ) ) ? esc_html($courseEndTime) : " " ;?>" /> 
 </p>
 <!-- Course date input -->
 <p>
 	<label for="teacher-cpd-key-info-date"><?php _e( 'Course date : ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="date" name="teacher-cpd-key-info-date" value="<?php echo ( isset ( $courseDate	) ) ? $courseDate : " " ;?>" />
+	<input type="date" name="teacher-cpd-key-info-date" value="<?php echo ( isset ( $courseDate	) ) ? esc_html($courseDate) : " " ;?>" />
 </p>
 <!-- Course price -->
 <p>
 	<label for="teacher-cpd-key-info-price"><?php _e( 'Course Price: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="text" name="teacher-cpd-key-info-price" value="<?php echo ( isset (  $courcePrice  ) ) ?  $courcePrice  : " " ;?> " /> 
+	<input type="text" name="teacher-cpd-key-info-price" value="<?php echo ( isset (  $courcePrice  ) ) ?  esc_html($courcePrice)  : " " ;?> " /> 
 </p>
 <!-- Course key stage input -->
 <p>

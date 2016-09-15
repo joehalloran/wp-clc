@@ -23,8 +23,11 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 		For
 		<?php 
 		
-		foreach($courseKeyStage as $key => $value) {
-			echo $value.', ';
+		foreach($courseKeyStage as $value) {
+			echo esc_html($value);
+			if ( !($value === end($courseKeyStage)) ) {
+				echo ', ';
+			}
 		}
 		?> 
 		teachers
@@ -43,7 +46,7 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 		if ( isset (  $courseDate  ) ) {
 			echo ldnclc_format_date($courseDate);
 		} else {
-			echo  "Tbc" ;
+			_e("Date: Tbc", 'ldnclc');
 			}
 		?>                        	
 	</p> 
@@ -66,7 +69,7 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 
 		} else {
 
-			_e("Tbc", 'ldnclc');
+			_e("Time: Tbc", 'ldnclc');
 		}
 		?> 
 	</p> 
@@ -83,14 +86,14 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 	<div class="cpd-box-icon">
 		<i class="fa fa-asterisk clc-dark-orange"></i> 
 	</div> 
-	<p class="tech-support-title"><?php echo ( isset (  $coursePrice  ) ) ?  '<strong>Price: </strong>'.$coursePrice  : _e("Price on enquiry", 'ldnclc') ;?></p> 
+	<p class="tech-support-title"><?php echo ( isset (  $coursePrice  ) ) ?  '<strong>Price: </strong>'.esc_html($coursePrice)  : _e("Price on enquiry", 'ldnclc') ;?></p> 
 	<hr class="tech-support-hr"> 
 
 	<!-- CODE --> 
 	<div class="cpd-box-icon">
 	<i class="fa fa-asterisk clc-light-orange"></i> 
 	</div> 
-	<p class="tech-support-title"><strong>Code:</strong> <?php echo ( isset (  $courseCode  ) ) ?  $courseCode  : _e("N/A", 'ldnclc') ;?></p> 
+	<p class="tech-support-title"><strong>Code:</strong> <?php echo ( isset (  $courseCode  ) ) ?  esc_html($courseCode) : _e("N/A", 'ldnclc') ;?></p> 
 	<hr class="tech-support-hr">
 
 	<!-- Book now -->

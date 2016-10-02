@@ -7,21 +7,27 @@
  * @package ldnclc_theme
  */
 
-$workshopCode = get_post_meta( $post->ID , 'pupil-workshop-key-info-code', true);
-$workshopLocation = get_post_meta( $post->ID , 'pupil-workshop-key-info-location', true);
-$workshopDuration = get_post_meta( $post->ID , 'pupil-workshop-key-info-duration', true);
-$workshopKeyStage = get_post_meta( $post->ID , 'pupil-workshop-key-info-key-stage', true);
+$courseCode = get_post_meta( $post->ID , 'teacher-cpd-key-info-code', true);
+$courseLocation = get_post_meta( $post->ID , 'teacher-cpd-key-info-location', true);
+$courseLocationOther = get_post_meta( $post->ID , 'teacher-cpd-key-info-location-other', true);
+$courseDate	= get_post_meta( $post->ID , 'teacher-cpd-key-info-date', true);
+$courseStartTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-start-time', true);
+$courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
+$coursePrice = get_post_meta( $post->ID , 'teacher-cpd-key-info-price', true);
+$courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', true);
 
-$terms = get_the_terms($post, 'pupil_workshop_type');
+$terms = get_the_terms($post, 'clc_teacher_cpd_type');
 $dataCat = '';
 foreach ($terms as $term) {
 	$dataCat .= $term->name.' ';
 }
 
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-category="<?php echo trim($dataCat); ?>">
 	<div class="cpd-box"> 
+		
 		<h2 class="cpd-title">
 			<a href="<?php echo get_the_permalink(); ?>"><? echo get_the_title(); ?></a></h2> 
 		<hr class="tech-support-hr"> 
@@ -34,7 +40,13 @@ foreach ($terms as $term) {
 					<i class="fa fa-asterisk clc-light-blue"></i> 
 				</div> 
 				<p class="tech-support-title">
-					<strong>Code:</strong> <?php echo ( isset (  $workshopCode  ) ) ?  esc_html($workshopCode)  : _e("N/A", 'ldnclc') ;?>
+					<?php 
+					if ( isset (  $courseDate  ) ) {
+						echo ldnclc_format_date($courseDate);
+					} else {
+						_e("Date: Tbc", 'ldnclc');
+					}
+					?> 
 				</p>
 				<hr class="tech-support-hr"> 
 
@@ -43,13 +55,18 @@ foreach ($terms as $term) {
 					<i class="fa fa-asterisk clc-green"></i> 
 				</div> 
 				<p class="tech-support-title">
-					<strong>For pupils in: </strong>
 					<?php 
-					foreach($workshopKeyStage as $value) {
-						echo esc_html($value);
-						if ( !($value === end($workshopKeyStage)) ) {
-							echo ', ';
-						}
+					if ( isset ( $courseStartTime  ) && isset ( $courseEndTime ) ){
+						
+						echo ldnclc_format_time($courseStartTime);
+						
+						echo " - ";
+						
+						echo ldnclc_format_time($courseEndTime);
+
+					} else {
+
+						_e("Time: Tbc", 'ldnclc');
 					}
 					?> 
 				</p> 
@@ -59,14 +76,14 @@ foreach ($terms as $term) {
 				<div class="cpd-box-icon">
 					<i class="fa fa-asterisk clc-dark-orange"></i> 
 				</div> 
-				<p class="tech-support-title"><strong>Duration:</strong> <?php echo ( isset (  $workshopDuration  ) ) ?  esc_html($workshopDuration)  : _e("Tbc", 'ldnclc') ;?></p> 
+				<p class="tech-support-title"><?php echo ( isset (  $coursePrice  ) ) ?  '<strong>Price: </strong>'.esc_html($coursePrice)  : _e("Price on enquiry", 'ldnclc') ;?></p> 
 				<hr class="tech-support-hr"> 
 				
 				<!-- CODE --> 
 				<div class="cpd-box-icon">
 					<i class="fa fa-asterisk clc-light-orange"></i> 
 				</div> 
-				<p class="tech-support-title"><strong>Location:</strong> <?php echo ( isset (  $workshopLocation  ) ) ?  esc_html($workshopLocation) : _e("Tbc", 'ldnclc') ;?></p> 
+				<p class="tech-support-title"><strong>Code:</strong> <?php echo ( isset (  $courseCode  ) ) ?  esc_html($courseCode) : _e("N/A", 'ldnclc') ;?></p> 
 				<hr class="tech-support-hr"> 
 
 			</div> 

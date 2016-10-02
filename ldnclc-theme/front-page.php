@@ -18,17 +18,6 @@ get_header(); ?>
                         <h1>London Connected Learning Centre</h1>
                         <h3>Learning with Technology</h3>
                         <hr class="intro-divider">
-                        <!--<ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="contact.html" class="btn btn-default btn-lg"><i class="fa fa-map-marker fa-fw"></i> <span class="network-name">Contact</span></a>
-                            </li>
-                            <li>
-                                <a href="services.html" class="btn btn-default btn-lg"><i class="fa fa-bell fa-fw"></i> <span class="network-name">About</span></a>
-                            </li>
-                        </ul>-->
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="#CLC-what-we-do" class="btn btn-default btn-lg"><i class="fa fa-angle-double-down fa-fw"></i> <span class="network-name"></span></a>
@@ -66,7 +55,7 @@ get_header(); ?>
             <div class="row">
                 <!-- CPD Box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="cpd.html">
+                    <a href="<?php echo (site_url().'/clc-cpd/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/teachers-at-cpd-sq-360x360.jpg" class="img-responsive" alt="">
                     <div class="services-box">
                         <div class="services-icon">
@@ -78,7 +67,7 @@ get_header(); ?>
                 </div>
                 <!-- SLA Box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="sla-packages.html">
+                    <a href="<?php echo (site_url().'/services/sla-packages/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/boy-with-makey-makey-sq-360x360.jpg" class="img-responsive" alt="">
                     <div class="services-box">
                         <div class="services-icon">
@@ -90,7 +79,7 @@ get_header(); ?>
                 </div>
                 <!-- Tech Support Box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="technical-support.html">
+                    <a href="<?php echo (site_url().'/services/technical-support/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/tech_support-sq-360x360.jpg" class="img-responsive" alt=""> 
                     <div class="services-box">
                         <div class="services-icon">
@@ -102,7 +91,7 @@ get_header(); ?>
                 </div>
                 <!-- Family learning box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="family-learning.html">
+                    <a href="<?php echo (site_url().'/services/family-learning/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/family-learning-sq-360x360.jpg" class="img-responsive" alt=""> 
                      <div class="services-box">
                         <div class="services-icon">
@@ -116,7 +105,7 @@ get_header(); ?>
             <div class="row">
                 <!-- Venue Hire box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="venue-hire.html">
+                    <a href="<?php echo (site_url().'/venue-hire/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/clc_building_front-sq-360x360.jpg" class="img-responsive" alt=""> 
                     <div class="services-box">
                         <div class="services-icon">
@@ -128,7 +117,7 @@ get_header(); ?>
                 </div>
                 <!-- Advice box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="consultancy.html">
+                    <a href="<?php echo (site_url().'/services/consultancy/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/advice-sq-360x360.jpg" class="img-responsive" alt="">
                     <div class="services-box">
                         <div class="services-icon">
@@ -140,7 +129,7 @@ get_header(); ?>
                 </div>
                 <!-- Research box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="research-project.html">
+                    <a href="<?php echo (site_url().'/services/research-projects/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/girl_on_computer-sq-360x360.jpg" class="img-responsive" alt="">
                      <div class="services-box">
                         <div class="services-icon">
@@ -152,7 +141,7 @@ get_header(); ?>
                 </div>
                 <!-- Projects Box -->
                 <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="bespoke-projects.html">
+                    <a href="<?php echo (site_url().'/services/bespoke-projects/'); ?>">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/camera_and_edit-sq-360x360.jpg" class="img-responsive" alt="">
                     <div class="services-box">
                         <div class="services-icon">

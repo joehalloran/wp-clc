@@ -23,18 +23,25 @@ get_header(); ?>
             <!-- /.row -->
 
             <div class="row">
-                <div class="col-md-8">
+            	<div class="col-md-4 col-md-push-8">
+					<?php
+					get_template_part( 'template-parts/sidebar', 'filter-clc_teacher_cpd' );
+					 ?>
+				</div>
+                <div class="col-md-8 col-md-pull-4">
 
 				<?php
 				$the_query = new WP_Query( array( 
 					'posts_per_page' => 50,
-					'post_type' => 'teacher_cpd',
+					'post_type' => 'clc_teacher_cpd',
 					'order'   => 'ASC',
 					'orderby'   => 'meta_value' ,
 					'meta_key'  => 'teacher-cpd-key-info-date',
-					'meta_value'   => date( "Ymd" ),
+					'meta_value'   => date( "Y-m-d" ),
 					'meta_compare' => '>',
 				) );
+
+
 
 				// The Loop
 				if ( $the_query->have_posts() ) :
@@ -44,7 +51,8 @@ get_header(); ?>
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'template-parts/content-teacher_cpd' );
+						
+						get_template_part( 'template-parts/content-clc_teacher_cpd' );
 
 
 					endwhile;
@@ -59,9 +67,7 @@ get_header(); ?>
 				endif; ?>
 
 				</div>
-				<div class="col-md-4">
-					<?php //get_sidebar(); ?>
-				</div>
+				
             </div>
         </div>
     </div>

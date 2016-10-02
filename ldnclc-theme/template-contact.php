@@ -52,7 +52,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-8 col-lg-9 col-sm-7">
                     <h2>Visiting London CLC</h2>
-                    <p>London CLC is based in Clapham, in south London.  We are based in a beautifully refurbished Victorian school building at the junction of Rectory Grove and North Street in Clapham Old Town. <a href="venue-hire.html" target="_blank">Find out more</a> about hiring space in our building.</p>
+                    <p>London CLC is based in Clapham, in south London.  We are based in a beautifully refurbished Victorian school building at the junction of Rectory Grove and North Street in Clapham Old Town. <a href="<?php echo (site_url().'/venue-hire/'); ?>" target="_blank">Find out more</a> about hiring space in our building.</p>
                     <p>If you are coming from Clapham Common tube, exit by the stairs on the right. When you have reached street level turn left and walk down The Pavement past the fire station. The CLC is on the left.<p>
                     <p>London CLC is well served by public transport via Clapham Junction on National Rail services, Clapham Common via the Underground Northern Line, Wandsworth Road via the London Overground and is also on numerous local bus routes.<p>
                     <p>Visit <a href="https://tfl.gov.uk/plan-a-journey/">Transport for London</a> to plan your journey.</p>

@@ -10,8 +10,9 @@ function ldnclc_scripts() {
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/322889a4a3.js');
 	// Enqueue bootstrap javascript
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '1.0.0', true );
+	// Enqueue custom js
+	wp_enqueue_script( 'ldnclc-js', get_template_directory_uri() . '/js/ldnclc.js', array( 'jquery' ), '1.0.0', true );
 	// Enqueue custom css:
-	// Load main stylesheet:
 	wp_enqueue_style( 'ldnclc-style', get_stylesheet_uri() );
 	// Load google fonts stylesheet.
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' );
@@ -86,9 +87,9 @@ function get_breadcrumbs() {
 	$trail = '<li><a href="' . home_url() . '">Home</a></li>';
 	// If is post (or cat or archive or search) add link to blog roll
 
-	if ( is_singular( 'teacher_cpd' ) ) {
+	if ( is_singular( 'clc_teacher_cpd' ) ) {
 		
-		$trail .= '<li><a href="' . get_post_type_archive_link( 'teacher_cpd' ) . '">Teacher CPD Courses</a></li>';
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'clc_teacher_cpd' ) . '">Teacher CPD at London CLC</a></li>';
 		
 	} elseif ( is_singular( 'resource' ) ) {
 		
@@ -98,10 +99,15 @@ function get_breadcrumbs() {
 		
 		$trail .= '<li><a href="' . get_post_type_archive_link( 'pupil_workshop' ) . '">Pupil workshops</a></li>';
 
+	} elseif ( is_singular( 'in_school_cpd' ) ) {
+		
+		$trail .= '<li><a href="' . get_post_type_archive_link( 'in_school_cpd' ) . '">In school CPD</a></li>';
+
 	} elseif ( is_post_type_archive( array( 
 			'pupil_workshop', 
 			'resource',
-			'teacher_cpd'
+			'clc_teacher_cpd',
+			'in_school_cpd'
 		) ) ) {
 
 		// No option here. This is just to exit if section before satisfying condition below and adding "blog" to breadcrumbs.

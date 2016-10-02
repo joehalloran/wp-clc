@@ -169,8 +169,9 @@ class Ldnclc_Plugin {
 
 		// Create custom post type and taxonomies
 		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_workshop' );
-		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_teacher_cpd' );
 		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_resources' );
+		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_clc_based_teacher_cpd' );
+		$this->loader->add_action( 'init', $plugin_admin, 'new_cpt_in_school_cpd' );
 
 	}
 

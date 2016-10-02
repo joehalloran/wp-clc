@@ -122,7 +122,7 @@ class Ldnclc_Plugin_Admin {
 		$this->new_cpt_item( $args = $cptArgs , $optsOveride = array() );
 
 		$this->new_taxonomy( 
-			$tax_name = 'Resources categories', 
+			$tax_name = 'resources_type', 
 			$single = 'Resource category', 
 			$plural = 'Resource categories',
 			$cpt = $cptArgs['cpt_name'] 
@@ -143,8 +143,8 @@ class Ldnclc_Plugin_Admin {
 		$cptArgs = array(
 				'cap_type' => 'post',
 				'cpt_name' => 'pupil_workshop',
-				'plural' => 'Pupil Workshops',
-				'single'=> 'Pupil Workshop',
+				'plural' => 'Pupil workshops',
+				'single'=> 'Pupil workshop',
 				'desc' => "Pupil workshop listings for London CLC",
 				'dashicon' => 'dashicons-welcome-learn-more',
 				'slug' => 'pupil-workshops',
@@ -154,8 +154,8 @@ class Ldnclc_Plugin_Admin {
 
 		$this->new_taxonomy( 
 			$tax_name 	= 'pupil_workshop_type',
-			$single 	= 'Pupil Workshop category',
-			$plural 	= 'Pupil Workshop categories',
+			$single 	= 'Pupil workshop category',
+			$plural 	= 'Pupil workshop categories',
 			$cpt = $cptArgs['cpt_name'] 
 			);
 
@@ -169,29 +169,52 @@ class Ldnclc_Plugin_Admin {
 	 * @access 	public
 	 * @uses 	new_cpt_item() and new_taxonomy()
 	 */
-	public function new_cpt_teacher_cpd(){
+	public function new_cpt_clc_based_teacher_cpd(){
 		$cptArgs = array(
 				'cap_type' => 'post',
-				'cpt_name' => 'teacher_cpd',
-				'plural' => 'Teacher CPD Courses',
-				'single'=> 'Teacher CPD Course',
-				'desc' => "Teacher CPD course listings for London CLC",
+				'cpt_name' => 'clc_teacher_cpd',
+				'plural' => 'Teacher CPD at London CLC',
+				'single'=> 'Teacher CPD at London CLC',
+				'desc' => "Teacher CPD course listings at London CLC",
 				'dashicon' => 'dashicons-businessman',
-				'slug' => 'teacher-cpd',
+				'slug' => 'clc-cpd',
 			);
 
 		$this->new_cpt_item( $args = $cptArgs , $optsOveride = array() );
 
 		//register_post_type( 'pupil_workshop' , $opts );
 
-		$this->new_taxonomy( 
-			$tax_name = 'teacher_cpd_type',
-			$single = 'Teacher CPD category',
-			$plural = 'Teacher CPD categories',
+		$this->new_taxonomy(
+			$tax_name = 'clc_teacher_cpd_type',
+			$single = 'CLC Teacher CPD category',
+			$plural = 'CLC Teacher CPD categories',
 			$cpt = $cptArgs['cpt_name'] 
 			);
 
 	}
+
+	public function new_cpt_in_school_cpd(){
+		$cptArgs = array(
+				'cap_type' => 'post',
+				'cpt_name' => 'in_school_cpd',
+				'plural' => 'In school CPD',
+				'single'=> 'In school CPD',
+				'desc' => "In school teacher CPD course listings for London CLC",
+				'dashicon' => 'dashicons-businessman',
+				'slug' => 'school-cpd',
+			);
+
+		$this->new_cpt_item( $args = $cptArgs , $optsOveride = array() );
+
+		$this->new_taxonomy( 
+			$tax_name = 'in_school_cpd_type',
+			$single = 'In school teacher CPD category',
+			$plural = 'In school eacher CPD categories',
+			$cpt = $cptArgs['cpt_name'] 
+			);
+
+	}
+
 
 	/**
 	 * Creates a new custom post type

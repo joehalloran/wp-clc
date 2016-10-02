@@ -15,7 +15,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 hidden-xs">
-                    <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/EDTLogo-140x40.png" >
+                    <a href="https://www.educationdevelopmenttrust.com/" target="_blank">
+                        <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/EDTLogo-140x40.png" >
+                    </a>
                     <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/LdnCLCLogo-70x70.png">
                     <p class="small footer-text">&copy; London Connected Learning Centre 2016</p>
                 </div>
@@ -34,7 +36,9 @@
                     </a> 
                 </div>
                 <div class="col-sm-4 visible-xs" style="margin-top: 10px;">
-                    <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/EDTLogo-140x40.png" >
+                    <a href="https://www.educationdevelopmenttrust.com/" target="_blank">
+                        <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/EDTLogo-140x40.png" >
+                    </a>
                     <img style="max-height: 40px;" class="img-responsive footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/LdnCLCLogo-70x70.png">
                     <p class="small footer-text">&copy; London Connected Learning Centre 2016</p>
                 </div>

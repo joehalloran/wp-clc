@@ -62,7 +62,7 @@ get_header(); ?>
                         <div class="collapse" id="cpd">
                             <li>
                                 <p>We run regular and ongoing professional learning at our centre in Clapham and can also provide bespoke CPD in your setting. Our professional learning programmes focus on equipping teachers with specialist skills and knowledge that have direct applications in the classroom. We build and sustain relationships with teachers, enabling them to be part of communities of practice; for example through our computing subject leaders’ course and subject forums for maths, science, EYFS, MFL, humanities and English. We also provide sessions that help educators develop the specific technical skills they need to help their students’ learning.</p>
-                                <a href="cpd.html"  target="_blank">See all teacher CPD sessions</a>
+                                <a href="<?php echo (site_url().'/clc-cpd/'); ?>"  target="_blank">See all teacher CPD sessions</a>
                             </li>
                         </div>
                     </ul>
@@ -77,7 +77,7 @@ get_header(); ?>
                         <div class="collapse" id="advice">
                             <li>
                                 <p>Every SLA package includes a number of in-school or centre-based consultancy sessions offering one-to-one support in a specific area.</p> 
-                                <a href="consultancy.html" target="_blank">See all consultancy sessions</a>
+                                <a href="<?php echo (site_url().'/consultancy/'); ?>" target="_blank">See all consultancy sessions</a>
                             </li>
                         </div>
                     </ul>
@@ -92,7 +92,7 @@ get_header(); ?>
                         <div class="collapse" id="workshops">
                             <li>
                                 <p>These practical workshops can take place at the CLC’s Clapham centre or in school. The sessions are led by a CLC staff member but are designed so that the class teacher can take a leading role. The activities have been developed with reference to the national curriculum programmes of study. Sessions have been split into specific support for delivery of the computing programmes of study and sessions to facilitate using technology to support cross-curricular learning.</p>
-                                <a href="pupil-workshops.html" target="_blank">See full list of pupil workshops</a>
+                                <a href="<?php echo (site_url().'/pupil-workshops/'); ?>" target="_blank">See full list of pupil workshops</a>
                             </li>
                         </div>
                     </ul>
@@ -107,7 +107,7 @@ get_header(); ?>
                         <div class="collapse" id="loans">
                             <li>
                                 <p>The CLC has a range of equipment and hardware that schools can borrow for the period of a short term. The CLC will provide help-sheets including curriculum ideas, video tutorials and maintenance support for the duration of the loan. Loans can be combined with CLC or school-based training to help ensure that equipment is used most effectively.</p>
-                                <a href="sla-technology-loans.html" target="_blank">See all equipment loans</a>
+                                <a href="<?php echo (site_url().'/services/sla-packages/sla-technology-loans/'); ?>" target="_blank">See all equipment loans</a>
                             </li>
                         </div>
                     </ul>
@@ -122,8 +122,8 @@ get_header(); ?>
                                     <th>Package Level</th>
                                     <th>Bronze</th>
                                     <th>Silver</th>
-                                    <th>Gold</th><
-                                    th>Platinum</th>
+                                    <th>Gold</th>
+                                    <th>Platinum</th>
                                 </tr>
                             </thead>
                             <tr>

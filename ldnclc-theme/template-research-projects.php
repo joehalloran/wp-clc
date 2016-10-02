@@ -36,46 +36,46 @@ get_header(); ?>
                     <div class="row">
                         <div class="col-md-4 col-sm-6 clc-col">
                             <div class="clc-box">
-                                <a href="research-projects/blogging.html"><h3>Blogs & writing</h3></a>
+                                <a href="<?php echo (site_url().'/services/research-projects/blogging/'); ?>"><h3>Blogs & writing</h3></a>
                                 <hr>
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/maryam_and_boy270x154.jpg" class="img-responsive hidden-xs"> 
                                 <hr class="hidden-xs">
                                 <p>There is plenty of evidence to show that blogging arouses students’ interest and enthusiasm for writing, but very little attention has been paid to its effects on the quality of writing...</p>
-                                <a href="research-projects/blogging.html" role="button" class="btn btn-primary">Find out more</a>
+                                <a href="<?php echo (site_url().'/services/research-projects/blogging/'); ?>" role="button" class="btn btn-primary">Find out more</a>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-6 clc-col">
                             <div class="clc-box">
-                                <a href="research-projects/reflected.html"><h3>ReflectED</h3></a>
+                                <a href="<?php echo (site_url().'/services/research-projects/reflected/'); ?>"><h3>ReflectED</h3></a>
                                 <hr>
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/reflected_logo270x154.jpg" class="img-responsive hidden-xs"> 
                                 <hr class="hidden-xs">
                                 <p>ReflectED is an approach that develops pupil’s metacognition as a tool for learning. Rosendale Primary School in Lambeth has been developing the ReflectED approach...</p>
-                                <a href="research-projects/reflected.html" role="button" class="btn btn-primary">Find out more</a>
+                                <a href="<?php echo (site_url().'/services/research-projects/reflected/'); ?>" role="button" class="btn btn-primary">Find out more</a>
                             </div>
                         </div>
 
                         <div class="col-md-4 hidden-sm clc-col">
                             <div class="clc-box">
-                                <a href="research-projects/scratch-maths.html"><h3>ScratchMaths</h3></a>
+                                <a href="<?php echo (site_url().'/services/research-projects/scratchmaths/'); ?>"><h3>ScratchMaths</h3></a>
                                 <hr>
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/scratchmaths270x154.jpg" class="img-responsive hidden-xs"> 
                                 <hr class="hidden-xs">
                                 <p>London CLC is a partner supporting the IOE UCL London Knowledge Lab led research project ScratchMaths.  The research, which has been funded by the Education...</p>
-                                <a href="research-projects/scratch-maths.html" role="button" class="btn btn-primary">Find out more</a>
+                                <a href="<?php echo (site_url().'/services/research-projects/scratchmaths/'); ?>" role="button" class="btn btn-primary">Find out more</a>
         				    </div>
                         </div>
                     </div>
                     <div class="row visible-sm">
                         <div class="col-sm-6 clc-col">
                             <div class="clc-box">
-                                <a href="research-projects/scratch-maths.html"><h3>ScratchMaths</h3></a>
+                                <a href="<?php echo (site_url().'/services/research-projects/scratchmaths/'); ?>"><h3>ScratchMaths</h3></a>
                                 <hr>
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/scratchmaths700x400.jpg" class="img-responsive"> 
                                 <hr>
                                 <p>London CLC is a partner supporting the IOE UCL London Knowledge Lab led research project ScratchMaths.  The research, which has been funded by the Education...</p>
-                                <a href="research-projects/scratch-maths.html" role="button" class="btn btn-primary">Find out more</a>
+                                <a href="<?php echo (site_url().'/services/research-projects/scratchmaths/'); ?>" role="button" class="btn btn-primary">Find out more</a>
                             </div>
                         </div>
                     </div>

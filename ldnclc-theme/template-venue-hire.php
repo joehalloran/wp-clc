@@ -101,7 +101,7 @@ get_header(); ?>
                             </picture>
 		                    <h3>Catering
 		                    </h3>
-		                    <p>Refreshments and catering can be arranged for all events. Please <a href="contact.html" target="_blank">contact us</a> for prices and further information.</p>
+		                    <p>Refreshments and catering can be arranged for all events. Please <a href="<?php echo (site_url().'/contact/'); ?>" target="_blank">contact us</a> for prices and further information.</p>
 							</div>
 		            </div>
 		            <div class="row">

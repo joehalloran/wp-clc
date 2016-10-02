@@ -10,9 +10,15 @@
 
 $materials = get_post_meta( $post->ID , 'ldnclc-materials');
 
+$terms = get_the_terms($post, 'resources_type');
+$dataCat = '';
+foreach ($terms as $term) {
+	$dataCat .= $term->name.' ';
+}
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-category="<?php echo trim($dataCat); ?>">
 	<div class="cpd-box"> 
 		<h2>
 			<a href="<?php echo get_the_permalink(); ?>"><? echo get_the_title(); ?></a>

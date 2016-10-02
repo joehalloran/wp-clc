@@ -10,16 +10,24 @@
 $courseCode = get_post_meta( $post->ID , 'teacher-cpd-key-info-code', true);
 $courseLocation = get_post_meta( $post->ID , 'teacher-cpd-key-info-location', true);
 $courseLocationOther = get_post_meta( $post->ID , 'teacher-cpd-key-info-location-other', true);
-$courseDate	= get_post_meta( $post->ID , 'teacher-cpd-key-info-date', true);
-$courseStartTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-start-time', true);
-$courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
+//$courseDate	= get_post_meta( $post->ID , 'teacher-cpd-key-info-date', true);
+//$courseStartTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-start-time', true);
+//$courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
 $coursePrice = get_post_meta( $post->ID , 'teacher-cpd-key-info-price', true);
 $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', true);
 
+$terms = get_the_terms($post, 'in_school_cpd_type');
+$dataCat = '';
+foreach ($terms as $term) {
+	$dataCat .= $term->name.' ';
+}
+
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-category="<?php echo trim($dataCat); ?>">
 	<div class="cpd-box"> 
+		
 		<h2 class="cpd-title">
 			<a href="<?php echo get_the_permalink(); ?>"><? echo get_the_title(); ?></a></h2> 
 		<hr class="tech-support-hr"> 
@@ -27,44 +35,7 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 			<!-- ICONS Section -->
 			<div class="col-sm-4"> 
 
-				<!-- DATE --> 
-				<div class="cpd-box-icon">
-					<i class="fa fa-asterisk clc-light-blue"></i> 
-				</div> 
-				<p class="tech-support-title">
-					<?php 
-					if ( isset (  $courseDate  ) ) {
-						echo ldnclc_format_date($courseDate);
-					} else {
-						_e("Date: Tbc", 'ldnclc');
-					}
-					?> 
-				</p>
-				<hr class="tech-support-hr"> 
-
-				<!-- TIME --> 
-				<div class="cpd-box-icon">
-					<i class="fa fa-asterisk clc-green"></i> 
-				</div> 
-				<p class="tech-support-title">
-					<?php 
-					if ( isset ( $courseStartTime  ) && isset ( $courseEndTime ) ){
-						
-						echo ldnclc_format_time($courseStartTime);
-						
-						echo " - ";
-						
-						echo ldnclc_format_time($courseEndTime);
-
-					} else {
-
-						_e("Time: Tbc", 'ldnclc');
-					}
-					?> 
-				</p> 
-				<hr class="tech-support-hr"> 
 				<!-- PRICE --> 
-
 				<div class="cpd-box-icon">
 					<i class="fa fa-asterisk clc-dark-orange"></i> 
 				</div> 

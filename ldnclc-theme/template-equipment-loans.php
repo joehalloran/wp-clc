@@ -34,7 +34,7 @@ get_header(); ?>
                         <!-- SLA LOANS -->
                         <div class="col-md-4 col-md-offset-1 col-sm-4 col-xs-6">
                             
-                            <a href="sla-packages.html">
+                            <a href="<?php echo (site_url().'/services/sla-packages/'); ?>">
                             <img src="<?php bloginfo('stylesheet_directory'); ?>/images/boy-with-makey-makey-sq-360x360.jpg" class="img-responsive" alt=""> 
                             <div class="services-box">
                                 <div class="services-icon">
@@ -47,7 +47,7 @@ get_header(); ?>
                         <!-- LAMBETH SECONDARY LOANS -->
                         <div class="col-md-4 col-md-offset-1 col-sm-4  col-sm-offset-2 col-xs-6">
                             
-                            <a href="technology-loans-for-lambeth-secondary-schools.html">
+                            <a href="<?php echo (site_url().'/services/equipment-loans/technology-loans-for-lambeth-secondary-schools/'); ?>">
                             <img src="<?php bloginfo('stylesheet_directory'); ?>/images/secondary_pupils_with_camera-sq-360x360.jpg" class="img-responsive">
                             <div class="services-box">
                                 <div class="services-icon">

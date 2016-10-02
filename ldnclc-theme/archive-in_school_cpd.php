@@ -17,27 +17,28 @@ get_header(); ?>
 	<!-- Page Content -->
     <div class="content-section-a">
         <div class="container">
+
             <!-- Page Heading/Breadcrumbs -->
             <?php get_template_part( 'template-parts/region', 'header' );?>
             <!-- /.row -->
 
             <div class="row">
-                <div class="col-md-4 col-md-push-8">
-
-					<?php
-					get_template_part( 'template-parts/sidebar', 'filter-resources' );
+            	<div class="col-md-4 col-md-push-8">
+					<?php //get_sidebar(); 
+					get_template_part( 'template-parts/sidebar', 'filter-in_school_cpd' );
 					 ?>
-
 				</div>
                 <div class="col-md-8 col-md-pull-4">
 
 				<?php
 				$the_query = new WP_Query( array( 
 					'posts_per_page' => 50,
-					'post_type' => 'resource',
+					'post_type' => 'in_school_cpd',
 					'order'   => 'ASC',
-					'orderby'   => 'title',
+					'orderby'   => 'title' ,
 				) );
+
+
 
 				// The Loop
 				if ( $the_query->have_posts() ) :
@@ -47,12 +48,14 @@ get_header(); ?>
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'template-parts/content-resource' );
+						
+						get_template_part( 'template-parts/content-in_school_cpd' );
 
 
 					endwhile;
 
-					the_posts_navigation();
+					// Previous/next page navigation.
+					the_posts_pagination();
 
 				else :
 
@@ -61,6 +64,7 @@ get_header(); ?>
 				endif; ?>
 
 				</div>
+				
             </div>
         </div>
     </div>

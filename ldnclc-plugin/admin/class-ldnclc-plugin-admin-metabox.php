@@ -70,7 +70,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	        'teachers-cpd-key-info', //id
 	        __( 'Teacher CPD Key Info', 'ldnclc-plugin' ), //title
 	        array( $this, 'ldnclc_plugin_metabox_teacher_cpd_key_info' ), //callback
-	        'teacher_cpd', //post_type
+	        array('in_school_cpd', 'clc_teacher_cpd'), //post_type
 	        'side', //context
 	        'low', // priority
 	        array() // callback args
@@ -80,7 +80,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	        'ldnclc-outcomes', //id
 	        __( 'Session outcomes', 'ldnclc-plugin' ), //title
 	        array( $this, 'ldnclc_plugin_metabox_outcomes' ), //callback
-	        array('pupil_workshop','teacher_cpd'), //post_type
+	        array('pupil_workshop', 'in_school_cpd', 'clc_teacher_cpd'), //post_type
 	        'normal', //context
 	        'low', // priority
 	        array() // callback args
@@ -90,7 +90,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	        'ldnclc-plugin-materials', //id
 	        __( 'Materials', 'ldnclc-plugin' ), //title
 	        array( $this, 'ldnclc_plugin_metabox_materials' ), //callback
-	        array('pupil_workshop','teacher_cpd', 'resource') , //post_type
+	        array('pupil_workshop', 'clc_teacher_cpd', 'resource') , //post_type
 	        'normal', //context
 	        'low', // priority
 	        array() // callback args

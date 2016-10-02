@@ -21,7 +21,7 @@ get_header(); ?>
 
             <div class="row">
             	<div class="col-md-4 col-md-push-8">
-                    <?php get_template_part( 'template-parts/sidebar', 'teacher-cpd-info' ); ?>
+                    <?php get_template_part( 'template-parts/sidebar', 'in-school-cpd-info' ); ?>
 				</div>
                 <div class="col-md-8 col-md-pull-4">
                 	<h2>Course Description</h2>
@@ -38,7 +38,7 @@ get_header(); ?>
 						 */
 						get_template_part( 'template-parts/content', get_post_format() );
 
-						get_template_part( 'template-parts/sidebar', 'teacher-cpd-outcomes' );
+						get_template_part( 'template-parts/sidebar', 'cpd-outcomes' );
 
 						get_template_part( 'template-parts/sidebar', 'materials' );
 

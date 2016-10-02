@@ -23,7 +23,12 @@ get_header(); ?>
             <!-- /.row -->
 
             <div class="row">
-                <div class="col-md-8">
+            	<div class="col-md-4 col-md-push-8">
+					<?php 
+					get_template_part( 'template-parts/sidebar', 'filter-pupil_workshop' );
+					?>
+				</div>
+                <div class="col-md-8 col-md-pull-4">
 
 				<?php
 				$the_query = new WP_Query( array( 
@@ -56,9 +61,7 @@ get_header(); ?>
 				endif; ?>
 
 				</div>
-				<div class="col-md-4">
-					<?php //get_sidebar(); ?>
-				</div>
+				
             </div>
         </div>
     </div>

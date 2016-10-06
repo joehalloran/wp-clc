@@ -19,7 +19,7 @@ get_header(); ?>
             <!-- Content Row -->
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'kim' );?>
+                    <?php get_template_part( 'template-parts/people', 'kim' );?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">We offer Service Level Agreements to London schools. Our SLAs are designed to help schools use digital technologies to enhance students’ learning across the curriculum.</p>

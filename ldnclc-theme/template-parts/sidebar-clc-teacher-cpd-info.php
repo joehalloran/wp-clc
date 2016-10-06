@@ -43,7 +43,7 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 	<!-- Date -->
 	<p class="tech-support-title">
 		<?php 
-		if ( isset (  $courseDate  ) ) {
+		if ( isset (  $courseDate  ) && $courseDate > 0 ) {
 			echo ldnclc_format_date($courseDate);
 		} else {
 			_e("Date: Tbc", 'ldnclc');
@@ -79,7 +79,18 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 	<div class="cpd-box-icon">
 		<i class="fa fa-asterisk clc-orange"></i> 
 	</div> 
-	<p class="tech-support-title">at <a href="../contact.html" target="_blank">London CLC</a>, SW4 0EL</p> 
+	<p class="tech-support-title">at
+	<?php
+	if ( $courseLocation == 'In school') {
+		echo 'in school';
+	} elseif ( $courseLocation == 'Other') {
+		echo $courseLocationOther;
+	} else {
+		echo ' <a href="'. site_url() .'/contact/" target="_blank">London CLC</a>, SW4 0EL';
+	}
+	?>
+	</p>
+
 	<hr class="tech-support-hr"> 
 
 	<!-- PRICE --> 

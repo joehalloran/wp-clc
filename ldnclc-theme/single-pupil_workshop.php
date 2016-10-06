@@ -38,9 +38,9 @@ get_header(); ?>
 						 */
 						get_template_part( 'template-parts/content', get_post_format() );
 
-						get_template_part( 'template-parts/sidebar', 'pupil-workshop-outcomes' );
+						get_template_part( 'template-parts/section', 'pupil-workshop-outcomes' );
 
-						get_template_part( 'template-parts/sidebar', 'materials' );
+						get_template_part( 'template-parts/section', 'materials' );
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :

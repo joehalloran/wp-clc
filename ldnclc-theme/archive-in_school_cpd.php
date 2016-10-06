@@ -24,8 +24,8 @@ get_header(); ?>
 
             <div class="row">
             	<div class="col-md-4 col-md-push-8">
-					<?php //get_sidebar(); 
-					get_template_part( 'template-parts/sidebar', 'filter-in_school_cpd' );
+					<?php
+					get_template_part( 'template-parts/filter', 'in_school_cpd' );
 					 ?>
 				</div>
                 <div class="col-md-8 col-md-pull-4">

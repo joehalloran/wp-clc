@@ -18,7 +18,7 @@ get_header(); ?>
         	<!-- Content Row -->
         	<div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'tim' );?>
+                    <?php get_template_part( 'template-parts/people', 'tim' );?>
                 </div>
         		<div class="col-sm-10 col-md-8">
 			    	<p class="lead">The CLC has an extensive technology equipment loans library available to schools that have CLC Service Level Agreement packages and Lambeth Secondary Schools.  The library, which includes robots, 3D printers, Raspberry Pis, e-readers, data-loggers, iPads, Microbits, 3D doodler pens, cameras and much more, enable schools to augment their own equipment without making unnecessary purchases and allow teachers to research new technologies before a school invests.</p>

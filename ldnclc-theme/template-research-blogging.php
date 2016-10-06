@@ -18,7 +18,7 @@ get_header(); ?>
         	<!-- Content Row -->
         	<div class="row">
                 <div class="col-sm-2 hidden-xs">
-                     <?php get_template_part( 'template-parts/sidebar', 'sarah' );?>
+                     <?php get_template_part( 'template-parts/people', 'sarah' );?>
                 </div>
         		<div class="col-sm-10 col-md-8">
 			    	<p class="lead">There is plenty of evidence to show that blogging arouses students’ interest and enthusiasm for writing, but very little attention has been paid to its effects on the quality of writing in general, or about its potential for developing students’ writing in new directions.</p>

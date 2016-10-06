@@ -25,7 +25,7 @@ get_header(); ?>
             <div class="row">
             	<div class="col-md-4 col-md-push-8">
 					<?php 
-					get_template_part( 'template-parts/sidebar', 'filter-pupil_workshop' );
+					get_template_part( 'template-parts/filter', 'pupil_workshop' );
 					?>
 				</div>
                 <div class="col-md-8 col-md-pull-4">

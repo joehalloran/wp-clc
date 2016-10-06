@@ -25,7 +25,7 @@ get_header(); ?>
             <div class="row spacer20"></div>
         	<div class="row">
                 <div class="col-sm-2 hidden-xs">
-                	<?php get_template_part( 'template-parts/sidebar', 'venue_hire_kim' );?>
+                	<?php get_template_part( 'template-parts/people', 'venue_hire_kim' );?>
                 </div>
         		<div class="col-sm-10 col-md-8">
 			    	<p class="lead">London City Learning Centre is a unique training centre based next to Clapham Common, offering five well equipped, light, airy and modern spaces ideal for professional learning, conferences, meetings events and filming. All spaces can be arranged to suit your needs; wireless internet access, equipment hire, technical support and catering are available. We cannot currently open on Sundays.</p>

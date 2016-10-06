@@ -20,7 +20,7 @@ get_header(); ?>
         	
             <div class="row">
             	<div class="col-sm-2 hidden-xs">
-            		<?php get_template_part( 'template-parts/sidebar', 'julia' );?>
+            		<?php get_template_part( 'template-parts/people', 'julia' );?>
             	</div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">London CLC can provide a range of consultancy and advice to support schools and other organisations in developing a digital strategy, finding technical solutions and planning and assessing the curriculum.</p>

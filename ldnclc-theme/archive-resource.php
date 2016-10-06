@@ -25,7 +25,7 @@ get_header(); ?>
                 <div class="col-md-4 col-md-push-8">
 
 					<?php
-					get_template_part( 'template-parts/sidebar', 'filter-resources' );
+					get_template_part( 'template-parts/filter', 'resources' );
 					 ?>
 
 				</div>

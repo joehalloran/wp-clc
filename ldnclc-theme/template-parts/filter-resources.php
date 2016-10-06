@@ -8,7 +8,7 @@
  */
 
 $terms = get_terms( array(
-    'taxonomy' => 'pupil_workshop_type',
+    'taxonomy' => 'resources_type',
     'hide_empty' => true,
 ) );
 
@@ -16,7 +16,7 @@ $terms = get_terms( array(
 
 <aside>
 	<div class="cpd-box"> 
-		<h2 class="cpd-title">Filters</h2> 
+		<h2 class="cpd-title">Filters <small>showing <span id="filter-results">all</span> items</small></h2> 
 		<hr class="tech-support-hr">
 		<?php
 		foreach ($terms as $term) {
@@ -25,7 +25,7 @@ $terms = get_terms( array(
 			?>
 			<div class="checkbox" >
 			    <label>
-			      <input data-filter="<?php echo esc_attr($termName); ?>" class="cpt-filter" type="checkbox"> <?php echo esc_html($termName); ?>
+			      <input data-filter="<?php echo esc_attr($termName); ?>" class="cpt-filter" type="checkbox" checked> <?php echo esc_html($termName); ?>
 			    </label>
 			  </div>
 		<?php

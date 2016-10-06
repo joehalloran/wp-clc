@@ -19,7 +19,7 @@ get_header(); ?>
             <!-- Content Row -->
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'tim' );?>
+                    <?php get_template_part( 'template-parts/people', 'tim' );?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">Here is our 2015-16 list of technology loans for SLA Primary schools</p>

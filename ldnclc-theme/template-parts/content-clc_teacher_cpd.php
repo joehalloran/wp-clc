@@ -41,7 +41,7 @@ foreach ($terms as $term) {
 				</div> 
 				<p class="tech-support-title">
 					<?php 
-					if ( isset (  $courseDate  ) ) {
+					if ( isset (  $courseDate  ) && $courseDate > 0 ) {
 						echo ldnclc_format_date($courseDate);
 					} else {
 						_e("Date: Tbc", 'ldnclc');

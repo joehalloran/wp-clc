@@ -19,7 +19,7 @@ get_header(); ?>
         	<!-- Content Row -->
         	<div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'suki' );?>
+                    <?php get_template_part( 'template-parts/people', 'suki' );?>
                 </div>
         		<div class="col-sm-10 col-md-8">
                     <p class="lead">Our programmes build on existing strengths within the family, celebrate diversity and support the learning and skills of both children and adult family members involved. London CLC has a long history of supporting family learning in schools and children’s centres in the London borough of Lambeth.</p>

@@ -18,7 +18,7 @@ get_header(); ?>
             <!-- Content Row -->
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
-                     <?php get_template_part( 'template-parts/sidebar', 'krzysz' );?>
+                     <?php get_template_part( 'template-parts/people', 'krzysz' );?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">We can ensure your school’s ICT systems are fit for purpose. Our technical team provides regular weekly technical support for schools as well as one off system audits, network installations, advice and technology solutions.</p>

@@ -18,7 +18,7 @@ get_header(); ?>
         	<!-- Content Row -->
         	<div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'joe' );?>
+                    <?php get_template_part( 'template-parts/people', 'joe' );?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">ReflectED is an approach that develops pupil’s metacognition as a tool for learning. Rosendale Primary School in Lambeth has been developing the ReflectED approach to teach these skills using digital portfolios.</p>

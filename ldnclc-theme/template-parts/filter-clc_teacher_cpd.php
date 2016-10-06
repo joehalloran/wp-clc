@@ -16,8 +16,10 @@ $terms = get_terms( array(
 
 <aside>
 	<div class="cpd-box"> 
-		<h2 class="cpd-title">Filters</h2> 
+		<h2 class="cpd-title">Filters <small>showing <span id="filter-results">all</span> items</small></h2> 
 		<hr class="tech-support-hr">
+		<a href="#" id="select-all">Select all</a>	
+		<a href="#" id="clear-all">Clear all</a>
 		<?php
 		foreach ($terms as $term) {
 			
@@ -31,8 +33,7 @@ $terms = get_terms( array(
 		<?php
 		}
 		?>
-		<a href="#" id="select-all">Select all</a>	
-		<a href="#" id="clear-all">Clear all</a>	
+			
 	
 	</div>
 </aside>

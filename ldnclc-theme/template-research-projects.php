@@ -18,7 +18,7 @@ get_header(); ?>
         	<!-- Content Row -->
         	<div class="row">
                  <div class="col-sm-2 hidden-xs">
-                 	<?php get_template_part( 'template-parts/sidebar', 'sarah' );?>
+                 	<?php get_template_part( 'template-parts/people', 'sarah' );?>
                    
                 </div>
                 <div class="col-sm-10 col-md-8">

@@ -17,7 +17,7 @@ get_header(); ?>
             <!-- Content Row -->
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <?php get_template_part( 'template-parts/sidebar', 'joe' );?>
+                    <?php get_template_part( 'template-parts/people', 'joe' );?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">London CLC is a partner supporting the IOE UCL London Knowledge Lab led research project ScratchMaths.</p>

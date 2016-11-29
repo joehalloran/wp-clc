@@ -4,7 +4,7 @@ Theme URI: http://londonclc.org.uk/
 Author: Joe Halloran
 Author URI: http://underscores.me/
 Description: Custom Theme for London CLC
-Version: 1.0.0
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ldnclc_theme
@@ -313,27 +313,27 @@ Tags:
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(images/girls_with_microphone-767.jpg) no-repeat 35% center;
+    background: url(images/pupils_at_londonclc767.jpg) no-repeat 35% center;
     background-size: cover;
 }
 
 @media (min-width: 768px) {
     .intro-header {
-        background: url(images/girls_with_microphone-991.jpg) no-repeat center 10%;
+        background: url(images/pupils_at_londonclc991.jpg) no-repeat center 20%;
         background-size: cover;
     }
 }
 
 @media (min-width: 992px) {
     .intro-header {
-        background: url(images/girls_with_microphone-1199.jpg) no-repeat center 10%;
+        background: url(images/pupils_at_londonclc1199.jpg) no-repeat center 60%;
         background-size: cover;
     }
 }
 
 @media (min-width: 1200px) {
     .intro-header {
-        background: url(images/girls_with_microphone1772.jpg) no-repeat center 10%;
+        background: url(images/pupils_at_londonclc1772.jpg) no-repeat center 10%;
         background-size: cover;
     }
 }
@@ -750,6 +750,12 @@ span.cpd-date-avoidwrap { display:inline-block; }
 
 
 /*Blog post styles*/
+article.post {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
 .byline,
 .updated:not(.published) {
     display: none;
@@ -760,7 +766,97 @@ span.cpd-date-avoidwrap { display:inline-block; }
 }
 
 
-*/
+.size-auto, .size-full, .size-large, .size-medium, .size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+/* wordpress default image styles */
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* entry meta test */
+footer.entry-meta {
+    margin-top: 20px;
+}
+
+.entry-meta {
+    color: #888888;
+    font-size: 85%;
+    margin-top: .5em;
+}
+
+.entry-meta a, .entry-meta a:visited {
+    color: #666666;
+}
+
+.cat-links, .comments-link, .tags-links, footer.entry-meta .byline, footer.entry-meta .posted-on {
+    display: block;
+}
+
+.cat-links:before {
+    content: "\f07b";
+}
+
+.comments-link:before {
+    content: "\f086";
+}
+
+.cat-links:before, .comments-link:before, .nav-next a:before, .nav-previous a:after, .tags-links:before, footer.entry-meta .author:before, footer.entry-meta .posted-on:before {
+    font-family: FontAwesome;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: 5px;
+    width: 13px;
+    position: relative;
+    text-align: center;
+}
+
+/* Post navigation */
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+    color: #888888;
+    font-size: 85%;
+    margin-top: .5em;
+}
+
+.nav-links a,
+.nav-links a:visited {
+    color: #666666;
+}
+
+.nav-links .nav-previous {
+    float: right;
+}
+
+.nav-links .nav-next {
+    text-align: left;
+}
+
+.nav-previous > a:after {
+    content: "\f061";
+    margin-left: 5px;
+    margin-right: 0;
+}
+.nav-next > a:before {
+    content: "\f060";
+} 
+
+
+
+/* CPD Filters */
+
+#select-all, #clear-all {
+    margin: 10px 10px 0 0;
+}
+
+
 /* END OF JOES ADDITIONS*/
 
 body,

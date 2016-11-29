@@ -44,7 +44,10 @@
 <!-- Course price -->
 <p>
 	<label for="teacher-cpd-key-info-price"><?php _e( 'Course Price: ', 'ldnclc-plugin' ); ?></label><br />
-	<input type="text" name="teacher-cpd-key-info-price" value="<?php echo ( isset (  $courcePrice  ) ) ?  esc_html($courcePrice)  : " " ;?> " /> 
+	<input type="radio" name="teacher-cpd-key-info-price" <?php echo (($courcePrice == "free") ? 'checked="checked" ' : " ") ;?>value="free">FREE<br />
+	<input type="radio" name="teacher-cpd-key-info-price" <?php echo (($courcePrice == "halfday") ? 'checked="checked" ' : " ") ;?>value="halfday">Half day (£50)<br />
+	<input type="radio" name="teacher-cpd-key-info-price" <?php echo (($courcePrice == "fullday") ? 'checked="checked" ' : " ") ;?>value="fullday">Full day (£95)<br />
+	<input type="radio" name="teacher-cpd-key-info-price" <?php echo (($courcePrice == "extended") ? 'checked="checked" ' : " ") ;?>value="extended">Extended (£125)<br />
 </p>
 <!-- Course key stage input -->
 <p>

@@ -18,10 +18,11 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 
 $terms = get_the_terms($post, 'clc_teacher_cpd_type');
 $dataCat = '';
-foreach ($terms as $term) {
-	$dataCat .= $term->name.' ';
+if ($terms) {
+	foreach ($terms as $term) {
+		$dataCat .= $term->name.' ';
+	}
 }
-
 
 ?>
 
@@ -71,12 +72,37 @@ foreach ($terms as $term) {
 					?> 
 				</p> 
 				<hr class="tech-support-hr"> 
+
+				<div class="cpd-box-icon">
+					<i class="fa fa-asterisk clc-dark-blue"></i> 
+				</div> 
+
+				<!-- Key stage -->
+				<p class="tech-support-title">
+
+					For
+					<?php 
+					
+					foreach($courseKeyStage as $value) {
+						echo esc_html($value);
+						if ( !($value === end($courseKeyStage)) ) {
+							echo ', ';
+						}
+					}
+					?> 
+					teachers
+					           	
+				</p> 
+				<hr class="tech-support-hr"> 
+
 				<!-- PRICE --> 
 
 				<div class="cpd-box-icon">
 					<i class="fa fa-asterisk clc-dark-orange"></i> 
 				</div> 
-				<p class="tech-support-title"><?php echo ( isset (  $coursePrice  ) ) ?  '<strong>Price: </strong>'.esc_html($coursePrice)  : _e("Price on enquiry", 'ldnclc') ;?></p> 
+				<p class="tech-support-title">
+				<strong>Price: </strong> <?php echo ldnclc_cpd_price($coursePrice); ?>
+				</p> 
 				<hr class="tech-support-hr"> 
 				
 				<!-- CODE --> 

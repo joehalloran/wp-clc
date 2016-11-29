@@ -1,12 +1,58 @@
 <?php 
 
+/**
+* Maps old .html urls from static site to new wordpress equivalents
+*
+*/
+function ldnclc_redirect() {
+	global $wp;
+	$current_url = $_SERVER["REQUEST_URI"];
+	$urlMapper = array(
+		"/about.html" => '/about/', 
+		"/bespoke-projects.html" => '/services/bespoke-projects/',
+		"/consultancy.html" => '/services/consultancy/',
+		"/contact.html" => '/contact/',
+		"/cpd.html" => '/clc-cpd/',
+		"/equipment-loans.html" => '/services/equipment-loans/',
+		"/family-learning.html" => '/services/family-learning/',
+		"/help-sheets.html" => '/help-sheets/',
+		"/help-videos.html" => '/help-videos/',
+		"/pupil-workshops.html" => '/pupil-workshops/',
+		"/research-project.html" => '/services/research-projects/',
+		"/services.html" => '/services/',
+		"/research-projects/blogging.html" => '/services/research-projects/blogging/',
+		"/research-projects/reflected.html" => '/services/research-projects/reflected/',
+		"/research-projects/scratch-maths.html" => '/services/research-projects/scratchmaths/',
+		"/sla-packages.html" => '/services/sla-packages/',
+		"/sla-technology-loans.html" => '/services/sla-packages/sla-technology-loans/',
+		"/technical-support.html" => '/services/technical-support/',
+		"/technology-loans-for-lambeth-secondary-schools.html" => '/services/equipment-loans/technology-loans-for-lambeth-secondary-schools/',
+		"/venue-hire.html" => '/venue-hire/',
+	);
+
+	// Loop through urls to redirect if match found
+	foreach ($urlMapper as $oldUrl => $newUrl) {
+
+		$searchRange = ( ( strlen($oldUrl) +1 ) *-1 ); // generate correct search rand for substr method.	
+
+		if (substr($current_url,$searchRange)==$oldUrl) {
+			wp_redirect( home_url().$newUrl );
+			exit;
+		}
+
+	}
+}
+add_action( 'template_redirect', 'ldnclc_redirect' );
+
+
 ##### Function to load additional scripts ######
 function ldnclc_scripts() {
 	// Deregister jquery to load in footer
 	wp_deregister_script( 'jquery' );
     // Register and load jquery in footer
-    wp_register_script( 'jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"), false, NULL, true );
-    // Font Awesome, required for star rating functions
+    wp_register_script( 'jquery', "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", array(), '2.1.1', true);
+    wp_enqueue_script('jquery');
+    // Font Awesome
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/322889a4a3.js');
 	// Enqueue bootstrap javascript
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '1.0.0', true );
@@ -155,13 +201,14 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Register Custom Navigation Walker include custom menu widget to use walkerclass
  */
-
-register_nav_menus(
-    array(
-        'main_menu' => 'Main Menu',
-    )
-);
-
+function ldnclc_register_nav_menus() {
+	register_nav_menus(
+	    array(
+	        'main_menu' => 'Main Menu',
+	    )
+	);
+}
+add_action( 'after_setup_theme', 'ldnclc_register_nav_menus' );
 
 
 /**
@@ -205,7 +252,6 @@ function ldnclc_get_page_title() {
 /**
  * Standard date format
  *
- * 
  */
 function ldnclc_format_date($date) {
 	$formatDate = strtotime($date);
@@ -216,12 +262,32 @@ function ldnclc_format_date($date) {
 /**
  * Standard time format
  *
- * 
  */
 function ldnclc_format_time($time) {
 	$formatTime = strtotime($time);
 	$output = date('g:i A', $formatTime);
 	return esc_html($output);
+}
+
+/**
+ * Returns prices for CLC CPD courses. This is where CLC price structure is set.
+ *
+ */
+function ldnclc_cpd_price($courseLen) {
+	$output = '';
+	if ($courseLen == "free") {
+		return "FREE";
+	} elseif ($courseLen == "halfday") {
+		$output .= "£50";
+	} elseif ($courseLen == "fullday") {
+		$output .= "£95";
+	} elseif ($courseLen == "extended") {
+		$output .= "£125 (extended CPD)";
+	} else {
+		$output .= "Price on enquiry";
+	}
+	$output .= " or free for SLA schools";
+	return $output;
 }
 
 ?>

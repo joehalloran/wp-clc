@@ -15,8 +15,8 @@ get_header(); ?>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>London Connected Learning Centre</h1>
-                        <h3>Learning with Technology</h3>
+                        <h1><?php bloginfo("name"); ?></h1>
+                        <h3><?php bloginfo("description"); ?></h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>

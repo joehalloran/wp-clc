@@ -25,7 +25,11 @@ get_header(); ?>
             <div class="row">
             	<div class="col-md-4 col-md-push-8">
 					<?php 
-					get_template_part( 'template-parts/filter', 'pupil_workshop' );
+					$terms = get_terms( array(
+					    'taxonomy' => 'pupil_workshop_type',
+					    'hide_empty' => true,
+					) );
+					include(locate_template('template-parts/filters.php'));
 					?>
 				</div>
                 <div class="col-md-8 col-md-pull-4">

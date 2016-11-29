@@ -18,8 +18,10 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 
 $terms = get_the_terms($post, 'in_school_cpd_type');
 $dataCat = '';
-foreach ($terms as $term) {
-	$dataCat .= $term->name.' ';
+if ($terms) {
+	foreach ($terms as $term) {
+		$dataCat .= $term->name.' ';
+	}
 }
 
 
@@ -39,7 +41,7 @@ foreach ($terms as $term) {
 				<div class="cpd-box-icon">
 					<i class="fa fa-asterisk clc-dark-orange"></i> 
 				</div> 
-				<p class="tech-support-title"><?php echo ( isset (  $coursePrice  ) ) ?  '<strong>Price: </strong>'.esc_html($coursePrice)  : _e("Price on enquiry", 'ldnclc') ;?></p> 
+				<p class="tech-support-title"><?php echo !empty($coursePrice) ?  '<strong>Price: </strong>'.esc_html($coursePrice)  : _e("Price on enquiry", 'ldnclc') ;?></p> 
 				<hr class="tech-support-hr"> 
 				
 				<!-- CODE --> 

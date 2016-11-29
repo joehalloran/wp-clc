@@ -12,8 +12,10 @@ $materials = get_post_meta( $post->ID , 'ldnclc-materials');
 
 $terms = get_the_terms($post, 'resources_type');
 $dataCat = '';
-foreach ($terms as $term) {
-	$dataCat .= $term->name.' ';
+if ($terms) {
+	foreach ($terms as $term) {
+		$dataCat .= $term->name.' ';
+	}
 }
 
 ?>
@@ -26,7 +28,8 @@ foreach ($terms as $term) {
 		<hr class="tech-support-hr"> 
 		<p class="cpd-preview-text"><?php echo get_the_excerpt(); ?></p>
 		<?php
-		if ( is_user_logged_in() ) {
+		// If statement removed to make resources open to all
+		// if ( is_user_logged_in() ) {
 			foreach ($materials as $materialItem) {
 		        foreach ($materialItem['title'] as $key => $value) {
 		            
@@ -39,9 +42,9 @@ foreach ($terms as $term) {
 
 		        }
 		    }
-		} else {
-			echo '<a class="btn btn-primary cpd-button" href="'. get_the_permalink().'" role="button">More info</a>';		
-		}
+		// } else {
+		// 	echo '<a class="btn btn-primary cpd-button" href="'. get_the_permalink().'" role="button">More info</a>';		
+		// }
 	    ?>
 	</div>
 </article><!-- #post-## -->

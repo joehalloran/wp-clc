@@ -1,4 +1,4 @@
- <div data-spy="affix" data-offset-top="425" data-offset-bottom="200">
+ <div data-spy="affix" data-offset-top="425">
     <a href="http://twitter.com/LdnCLC" target="_blank">
         <i class="fa fa-twitter fa-2x services-right-social-logo"></i>
     </a>

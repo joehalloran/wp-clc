@@ -34,7 +34,7 @@
 				) );
 			} else {
 				the_excerpt();
-				echo '<p class="read-more-link"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read more</a></p>' ;
+				echo '<a class="btn btn-primary" href="'. esc_url( get_permalink() ) . '" role="button">Read more</a>';
 			}
 
 			wp_link_pages( array(
@@ -44,7 +44,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-meta">
 		<?php ldnclc_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

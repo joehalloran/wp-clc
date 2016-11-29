@@ -144,33 +144,8 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	 */
 	public function ldnclc_plugin_metabox_outcomes( $post ) {
 	    $outcomes = get_post_meta( $post->ID , 'ldnclc-outcomes', true);
-	    		
-		echo "<h4>Item 1: </h4>";
 
-		wp_editor( $content = $outcomes[0], $editor_id = "ldnclc-outcomes-0", $settings = array(
-			'textarea_name' => 'ldnclc-outcomes[0]',
-			'textarea_rows' => 2,
-			'teeny' => TRUE,
-			'media_buttons' => FALSE,
-		) );
-
-		echo "<h4>Item 2: </h4>";
-
-		wp_editor( $content = $outcomes[1], $editor_id = "ldnclc-outcomes-1", $settings = array(
-			'textarea_name' => 'ldnclc-outcomes[1]',
-			'textarea_rows' => 2,
-			'teeny' => TRUE,
-			'media_buttons' => FALSE,
-		) );
-
-		echo "<h4>Item 3: </h4>";
-
-		wp_editor( $content = $outcomes[2], $editor_id = "ldnclc-outcomes-2", $settings = array(
-			'textarea_name' => 'ldnclc-outcomes[2]',
-			'textarea_rows' => 2,
-			'teeny' => TRUE,
-			'media_buttons' => FALSE,
-		) );
+	    include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/ldnclc-plugin-metabox-outcomes.php';
 
 	}
 

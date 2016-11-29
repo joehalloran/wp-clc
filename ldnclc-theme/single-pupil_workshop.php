@@ -44,6 +44,11 @@ get_header(); ?>
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
+							?>
+							<h3>Tell us about your experiences</h3>
+							<p>If you and you class have attended this workshop please invite your pupils to share their experiences of the session or any follow-up work you might do at school in the comments below. All comments are moderated by CLC staff.</p>
+
+							<?php
 							comments_template();
 						endif;
 

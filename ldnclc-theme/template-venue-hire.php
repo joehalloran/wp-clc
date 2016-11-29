@@ -52,7 +52,7 @@ get_header(); ?>
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>
 		                    <h3 class="venue-room-title">The Conference Room<br>
-		                        <small>Capacity: 50</small>
+		                        <small>Capacity: 50</small><br />
 		                    </h3>
 		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#conferenceRoom">Learn More</button>
 		                </div>
@@ -61,7 +61,7 @@ get_header(); ?>
                                 <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/macsuite-290.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/macsuite-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>
-		                    <h3 class="venue-room-title">The Computer Suite<br>
+		                    <h3 class="venue-room-title">The Computer Suite<br />
 		                        <small>Capacity: 30 plus tutor</small>
 		                    </h3>
 		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#macSuite">Learn More</button>
@@ -71,7 +71,7 @@ get_header(); ?>
                                 <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-2-290.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-2-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>
-		                    <h3 class="venue-room-title">The Small Meeting Room<br>
+		                    <h3 class="venue-room-title">The Small Meeting Room<br />
 		                        <small>Capacity: 8</small>
 		                    </h3>
 		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#smallMeeting">Learn More</button>
@@ -81,7 +81,7 @@ get_header(); ?>
                                 <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/clc_door-290.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/clc_door-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>  
-		                    <h3>The Studio<br>
+		                    <h3>The Studio<br />
 		                        <small>Capacity: 10</small>
 		                    </h3>
 		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studio">Learn More</button>
@@ -166,6 +166,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <p>The conference room is a large room with a built-in projector – perfect for larger groups, conferences, seminars and events. The space can also be cleared for movement or performing arts workshops. Laptops can be provided should you require them.</p>
+                        <p><strong>Dims:</strong> 5.7m x 9.5m</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -285,6 +286,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <p>This meeting room is ideal for smaller groups wishing to hire space. It is a bright, quiet and modern space and can be equipped with projectors, flip charts and laptops for meetings.</p>
+                        <p><strong>Dims:</strong> 3.5m x 3.2m (table size 1.4m x 1.4m)</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -334,6 +336,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <p>The studio is a medium-sized, flexible space that can be used for filming and recording or as a meeting room or classroom. It’s equipped with an interactive LCD touch screen, iMac and green screen. Hire of filming equipment can be arranged. Please contact the CLC team for more information.</p>
+                        <p><strong>Dims:</strong> 3.8m x 6.7m</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -390,6 +393,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <p>The breakout space is a shared space which may be used groups hiring other rooms. The high windows allow in plenty of natural light, while sofas and a pull-out kitchen make it a great place to have lunch or refreshments.</p>
+                        <p><strong>Dims:</strong> 5.5m x 7.2m</p>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -25,7 +25,11 @@ get_header(); ?>
                 <div class="col-md-4 col-md-push-8">
 
 					<?php
-					get_template_part( 'template-parts/filter', 'resources' );
+					$terms = get_terms( array(
+					    'taxonomy' => 'resources_type',
+					    'hide_empty' => true,
+					) );
+					include(locate_template('template-parts/filters.php'));
 					 ?>
 
 				</div>

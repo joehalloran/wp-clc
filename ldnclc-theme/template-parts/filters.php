@@ -7,17 +7,15 @@
  * @package ldnclc_theme
  */
 
-$terms = get_terms( array(
-    'taxonomy' => 'resources_type',
-    'hide_empty' => true,
-) );
-
 ?>
 
 <aside>
 	<div class="cpd-box"> 
 		<h2 class="cpd-title">Filters <small>showing <span id="filter-results">all</span> items</small></h2> 
 		<hr class="tech-support-hr">
+		<button type="button" class="btn btn-default" id="select-all">Select all</button>
+		<button type="button" class="btn btn-default" id="clear-all">Clear all</button>
+		<a href="#" ></a>
 		<?php
 		foreach ($terms as $term) {
 			
@@ -31,7 +29,5 @@ $terms = get_terms( array(
 		<?php
 		}
 		?>
-		<a href="#" id="select-all">Select all</a>	
-		<a href="#" id="clear-all">Clear all</a>		
 	</div>
 </aside>

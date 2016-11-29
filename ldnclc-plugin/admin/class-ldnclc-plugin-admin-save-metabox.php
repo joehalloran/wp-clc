@@ -71,7 +71,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 
 	    $this->ldnclc_plugin_save_teacher_cpd_key_info( $post_id ) ;
 
-	    $this->ldnclc_plugin_save_pupil_workshop_what_next( $post_id ) ;
+	    $this->ldnclc_plugin_save_outcomes( $post_id ) ;
 
 		$this->ldnclc_plugin_save_pupil_workshop_materials( $post_id ) ;
 			
@@ -152,8 +152,11 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 		}
 
 		if( isset( $_POST[ 'teacher-cpd-key-info-price' ] ) ) {
-			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-price' ]);
-		    update_post_meta( $post_id, 'teacher-cpd-key-info-price', $value );
+			$value = $_POST[ 'teacher-cpd-key-info-price' ];
+			$acceptedValues = array("free", "halfday", "fullday", "extended");
+			if ( in_array($value, $acceptedValues) ) {
+			    update_post_meta( $post_id, 'teacher-cpd-key-info-price', $value );
+			}
 		}
 
 		if( isset( $_POST[ 'teacher-cpd-key-info-key-stage' ] ) ) {
@@ -173,7 +176,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	 * @access 	protected
 	 * @return 	void
 	 */
-	protected function ldnclc_plugin_save_pupil_workshop_what_next( $post_id ) {
+	protected function ldnclc_plugin_save_outcomes( $post_id ) {
 		// Checks for input and saves if needed
 		
 		if( isset( $_POST[ 'ldnclc-outcomes' ] ) ) {

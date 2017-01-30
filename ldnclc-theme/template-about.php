@@ -155,6 +155,13 @@ get_header(); ?>
                     </h3>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#harminder">Learn More</button>
                 </div>
+                <div class="col-lg-4 col-sm-6 text-center team-page-spacing">
+                    <img class="img-circle img-responsive img-center" src="<?php bloginfo('stylesheet_directory'); ?>/images/team/james200x200.jpg" alt="">
+                    <h3>James Goddard<br>
+                        <small>Project Manager</small>
+                    </h3>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#james">Learn More</button>
+                </div>
             </div>
         </div>
     </div>
@@ -475,6 +482,26 @@ get_header(); ?>
         </div>
     </div>
     <!--END Harminder Modal-->
+    <!-- James Modal -->
+    <div class="modal fade" id="james" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">James Goddard</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" style="float:left; margin-right:10px; margin-bottom:10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/team/james200x200.jpg">
+                    <p>​James is a key contact for Schools​ ​​and other organisations involved in CLC programmes​. His role is ensuring projects and services provided by London CLC are delivered effectively​ and to the highest standard. James also leads on the CLC's social media strategy and he oversees the centres various platforms. James is very passionate about education and has a background in teaching abroad in Thailand and Uganda as well as managing a maths and English tuition centre before joining the ​CLC ​team.</p>
+                    <p>Email Hames: <a href="mailto:jgoddard@londonclc.org.uk">jgoddard@londonclc.org.uk</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END James Modal-->
 <?php
 
 get_footer();

@@ -58,3 +58,8 @@
   	<input type="checkbox" name="teacher-cpd-key-info-key-stage[]" <?php echo ((in_array( "KS3", $courseKeyStage)) ? 'checked="checked" ' : " ") ;?> value="KS3"> KS3<br />
   	<input type="checkbox" name="teacher-cpd-key-info-key-stage[]" <?php echo ((in_array( "KS4", $courseKeyStage)) ? 'checked="checked" ' : " ") ;?> value="KS4"> KS4<br />
  </p>
+<!-- Course booking link -->
+<p>
+	<label for="teacher-cpd-key-info-booking-link"><?php _e( 'Course booking link (EventBrite): ', 'ldnclc-plugin' ); ?></label><br />
+	<input type="text" name="teacher-cpd-key-info-booking-link" value="<?php echo ( isset (  $courseBookingLink  ) ) ?  esc_html($courseBookingLink)  : " " ;?> " /> 
+</p>

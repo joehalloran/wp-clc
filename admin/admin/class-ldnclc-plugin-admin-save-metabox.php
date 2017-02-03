@@ -167,6 +167,13 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 			}
 	    	update_post_meta( $post_id, 'teacher-cpd-key-info-key-stage', $values );
 		}
+
+		if( isset( $_POST[ 'teacher-cpd-key-info-booking-link' ] ) ) {
+			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-booking-link' ]);
+		    update_post_meta( $post_id, 'teacher-cpd-key-info-booking-link', $value );
+		}
+
+		
 	}
 
 	/**

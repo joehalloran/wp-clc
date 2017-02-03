@@ -7,6 +7,7 @@ $courseStartTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-start-time',
 $courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
 $coursePrice = get_post_meta( $post->ID , 'teacher-cpd-key-info-price', true);
 $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', true);
+$courseBookingLink = get_post_meta( $post->ID , 'teacher-cpd-key-info-booking-link', true);
 ?>
 
 <div class="spacer20"></div>
@@ -110,5 +111,11 @@ $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', t
 	<hr class="tech-support-hr">
 
 	<!-- Book now -->
-	<a style="margin-top: 10px; margin-left: 17px;" class="btn btn-primary" target="_blank" href="https://docs.google.com/a/lambethclc.org.uk/forms/d/1e1TAkDcN2RlxSTEbamirDDgoGc3aWggoTvanVbPCxTw/viewform" role="button">Book Now</a> 
+	<?php 
+		if ( !empty( $courseBookingLink ) ) {
+			echo '<a style="margin-top: 10px; margin-left: 17px;" class="btn btn-primary" target="_blank" href="'.esc_html($courseBookingLink).'" role="button">Book Now</a>';
+		} else {
+			echo '<a style="margin-top: 10px; margin-left: 17px;" class="btn btn-primary" target="_blank" href="https://docs.google.com/a/lambethclc.org.uk/forms/d/1e1TAkDcN2RlxSTEbamirDDgoGc3aWggoTvanVbPCxTw/viewform" role="button">Book Now</a>';
+		}
+	?>
 </div>

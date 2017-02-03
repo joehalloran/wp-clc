@@ -131,6 +131,7 @@ class Ldnclc_Plugin_Admin_Metaboxes
 	    $courseEndTime = get_post_meta( $post->ID , 'teacher-cpd-key-info-end-time', true);
 	    $courcePrice = get_post_meta( $post->ID , 'teacher-cpd-key-info-price', true);
 	    $courseKeyStage = get_post_meta( $post->ID , 'teacher-cpd-key-info-key-stage', true);
+	    $courseBookingLink = get_post_meta( $post->ID , 'teacher-cpd-key-info-booking-link', true);
 
 	    include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/ldnclc-plugin-metabox-teacher-cpd-key-info.php';
 	}

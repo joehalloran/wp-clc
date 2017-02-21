@@ -7,39 +7,47 @@
 function ldnclc_redirect() {
 	global $wp;
 	$current_url = $_SERVER["REQUEST_URI"];
-	$urlMapper = array(
-		"/about.html" => '/about/', 
-		"/bespoke-projects.html" => '/services/bespoke-projects/',
-		"/consultancy.html" => '/services/consultancy/',
-		"/contact.html" => '/contact/',
-		"/cpd.html" => '/clc-cpd/',
-		"/equipment-loans.html" => '/services/equipment-loans/',
-		"/family-learning.html" => '/services/family-learning/',
-		"/help-sheets.html" => '/help-sheets/',
-		"/help-videos.html" => '/help-videos/',
-		"/pupil-workshops.html" => '/pupil-workshops/',
-		"/research-project.html" => '/services/research-projects/',
-		"/services.html" => '/services/',
-		"/research-projects/blogging.html" => '/services/research-projects/blogging/',
-		"/research-projects/reflected.html" => '/services/research-projects/reflected/',
-		"/research-projects/scratch-maths.html" => '/services/research-projects/scratchmaths/',
-		"/sla-packages.html" => '/services/sla-packages/',
-		"/sla-technology-loans.html" => '/services/sla-packages/sla-technology-loans/',
-		"/technical-support.html" => '/services/technical-support/',
-		"/technology-loans-for-lambeth-secondary-schools.html" => '/services/equipment-loans/technology-loans-for-lambeth-secondary-schools/',
-		"/venue-hire.html" => '/venue-hire/',
-	);
 
-	// Loop through urls to redirect if match found
-	foreach ($urlMapper as $oldUrl => $newUrl) {
+	// if request is .html (i.e. from the old static website)
+	if ( substr($current_url, -5) == ".html" ) {
 
-		$searchRange = ( ( strlen($oldUrl) +1 ) *-1 ); // generate correct search rand for substr method.	
+		trigger_error("Beginning redirect search: ldnclc_redirect in theme functions.php", E_USER_WARNING);
 
-		if (substr($current_url,$searchRange)==$oldUrl) {
-			wp_redirect( home_url().$newUrl );
-			exit;
+		$urlMapper = array(
+			"/about.html" => '/about/', 
+			"/bespoke-projects.html" => '/services/bespoke-projects/',
+			"/consultancy.html" => '/services/consultancy/',
+			"/contact.html" => '/contact/',
+			"/cpd.html" => '/clc-cpd/',
+			"/equipment-loans.html" => '/services/equipment-loans/',
+			"/family-learning.html" => '/services/family-learning/',
+			"/help-sheets.html" => '/help-sheets/',
+			"/help-videos.html" => '/help-videos/',
+			"/pupil-workshops.html" => '/pupil-workshops/',
+			"/research-project.html" => '/services/research-projects/',
+			"/services.html" => '/services/',
+			"/research-projects/blogging.html" => '/services/research-projects/blogging/',
+			"/research-projects/reflected.html" => '/services/research-projects/reflected/',
+			"/research-projects/scratch-maths.html" => '/services/research-projects/scratchmaths/',
+			"/sla-packages.html" => '/services/sla-packages/',
+			"/sla-technology-loans.html" => '/services/sla-packages/sla-technology-loans/',
+			"/technical-support.html" => '/services/technical-support/',
+			"/technology-loans-for-lambeth-secondary-schools.html" => '/services/equipment-loans/technology-loans-for-lambeth-secondary-schools/',
+			"/venue-hire.html" => '/venue-hire/',
+		);
+
+		// Loop through urls to redirect if match found
+		foreach ($urlMapper as $oldUrl => $newUrl) {
+
+			$searchRange = ( ( strlen($oldUrl) +1 ) *-1 ); // generate correct search rand for substr method.	
+
+			if (substr($current_url,$searchRange)==$oldUrl) {
+				trigger_error("Redirecting from {$oldUrl} to {$newUrl}: ldnclc_redirect in theme functions.php", E_USER_WARNING);
+				wp_redirect( home_url().$newUrl );
+				exit;
+			}
+
 		}
-
 	}
 }
 add_action( 'template_redirect', 'ldnclc_redirect' );
@@ -58,12 +66,12 @@ function ldnclc_scripts() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '1.0.0', true );
 	// Enqueue custom js
 	wp_enqueue_script( 'ldnclc-js', get_template_directory_uri() . '/js/ldnclc.js', array( 'jquery' ), '1.0.0', true );
+	// Enqueue bootstrap css
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', '1.0.0');
 	// Enqueue custom css:
 	wp_enqueue_style( 'ldnclc-style', get_stylesheet_uri() );
 	// Load google fonts stylesheet.
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' );
-	wp_enqueue_style( 'google-fonts-two', 'http://fonts.googleapis.com/css?family=Ubuntu' );
-	
 }
 add_action( 'wp_enqueue_scripts', 'ldnclc_scripts' );
 

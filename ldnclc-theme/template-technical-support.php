@@ -59,13 +59,10 @@ get_header(); ?>
                     <h4 class="services-list-heading">iPad and Laptop Deployment</h4><br>
                     <!-- <hr class="services-hr"> -->
                     <div class="services-asterisk"> <i class="fa fa-asterisk clc-dark-blue"></i></div> 
-                    <h4 class="services-list-heading">Audits and advice</h4><br>
+                    <h4 class="services-list-heading">System Audits</h4><br>
                     <!-- <hr class="services-hr"> -->
                     <div class="services-asterisk"> <i class="fa fa-asterisk clc-dark-green"></i></div> 
-                    <h4 class="services-list-heading">Procurement</h4><br>
-                    <!-- <hr class="services-hr"> -->
-                    <div class="services-asterisk"> <i class="fa fa-asterisk clc-orange  "></i></div> 
-                    <h4 class="services-list-heading">Minecraft Edu Set-up</h4><br>
+                    <h4 class="services-list-heading">Procurement Advice</h4><br>
                     <!-- <hr class="services-hr"> -->
                     <div class="spacer20"></div>
             

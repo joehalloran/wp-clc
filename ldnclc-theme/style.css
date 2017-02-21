@@ -11,8 +11,6 @@ Text Domain: ldnclc_theme
 Tags:
 */
 
-@import url('css/bootstrap.min.css');
-
 
 .cpd-sidebar.affix-top {
     width: 100%;
@@ -763,6 +761,10 @@ article.post {
 
 .comments-link {
     margin-right: 10px;
+}
+
+.sharedaddy {
+	margin: 20px 0;
 }
 
 

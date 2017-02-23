@@ -39,7 +39,6 @@ get_header(); ?>
                     <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/BFILogo-52x50.jpg">
                     <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/IBM_white_169x70.jpg">
                     <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/LAMBETH1.gif">
-                    <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/researched_logo_small456x220.png">
                     <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/Apple.gif">
                     <img class="img-responsive about-us-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/cas_noe_216x70.jpg">
                 </div>
@@ -161,6 +160,13 @@ get_header(); ?>
                         <small>Project Manager</small>
                     </h3>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#james">Learn More</button>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center team-page-spacing">
+                    <img class="img-circle img-responsive img-center" src="<?php bloginfo('stylesheet_directory'); ?>/images/team/louise200x200.jpg" alt="">
+                    <h3>Louise Wade<br>
+                        <small>Computing Teaching and Learning Consultant</small>
+                    </h3>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#louise">Learn More</button>
                 </div>
             </div>
         </div>
@@ -493,7 +499,27 @@ get_header(); ?>
                 <div class="modal-body">
                     <img class="img-responsive" style="float:left; margin-right:10px; margin-bottom:10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/team/james200x200.jpg">
                     <p>​James is a key contact for Schools​ ​​and other organisations involved in CLC programmes​. His role is ensuring projects and services provided by London CLC are delivered effectively​ and to the highest standard. James also leads on the CLC's social media strategy and he oversees the centres various platforms. James is very passionate about education and has a background in teaching abroad in Thailand and Uganda as well as managing a maths and English tuition centre before joining the ​CLC ​team.</p>
-                    <p>Email Hames: <a href="mailto:jgoddard@londonclc.org.uk">jgoddard@londonclc.org.uk</a></p>
+                    <p>Email James: <a href="mailto:jgoddard@londonclc.org.uk">jgoddard@londonclc.org.uk</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END James Modal-->
+     <!-- Louise Modal -->
+    <div class="modal fade" id="louise" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Louise Wade</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" style="float:left; margin-right:10px; margin-bottom:10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/team/louise200x200.jpg">
+                    <p>​Louise is a computing teaching and learning consultant at London Connected Learning Centre. Her specialisms include primary computer science, digital technology in the classroom and coaching teachers. Louise was previously a primary teacher , ICT Subject Leader and SENCO. She has a  wealth of experience in primary education, having worked across London and in education settings as diverse as Mexico City and New Zealand. Louise has also worked in a number of support and advisory roles for Local Authorities and CLCs. Her focus has always been on supporting class teachers to make the most of technology to support learning. In addition to her role at London Connected Learning Centre, Louise continues to teach computing 1 day a week at a London primary school. Her areas of interest include flipped learning, early years , computational thinking across the curriculum and problem solving in computer science.</p>
+                    <p>Email Louise: <a href="mailto:lwade@londonclc.org.uk">lwade@londonclc.org.uk</a></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

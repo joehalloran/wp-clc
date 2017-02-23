@@ -22,17 +22,7 @@ get_header(); ?>
                    
                 </div>
                 <div class="col-sm-10 col-md-8">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-9">
-                            <p class="lead">London Connected Learning Centre is involved in education practice based research. We have recently developed a partnership with <a href="http://www.workingoutwhatworks.com" target="_blank"> researchED</a>, the grass-roots, teacher-led organisation that aims to improve research literacy in the education community.</p>
-                        </div>
-                        <div class="col-md-2 col-xs-5 col-sm-3">
-                            <a href="http://www.workingoutwhatworks.com" target="_blank">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/researched_logo_100w.png" class="img-responsive" alt="ResearchED Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <p class="lead">Our recent and current research projects include:</p>
+                    <p class="lead">London Connected Learning Centre is involved in education research. Our recent and current research projects include:</p>
                     <div class="row">
                         <div class="col-md-4 col-sm-6 clc-col">
                             <div class="clc-box">

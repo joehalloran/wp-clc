@@ -41,6 +41,11 @@ get_header(); ?>
                             sizes="90vw"
                             alt="The London CLC building at night" />
                     </picture>
+                    <div class="spacer20"></div>
+                    <blockquote>
+                        <h3>“The London CLC was an excellent choice for our event. The equipment and lunch were both to a great standard, and the staff were very helpful and friendly.”</h3>
+                        <footer style="font-size:100%;">Lianna  <cite title="Source Title">Historic England</cite></footer>
+                    </blockquote>
                     <h2 class="services-subtitle">Clapham Old Town</h2>
                     <div class="row">
                         <div class="col-md-5">
@@ -58,7 +63,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-sm-6 text-center team-page-spacing">
                             <picture>
-                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room-290.jpg">
+                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room3-290x193.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>
 		                    <h3 class="venue-room-title">The Conference Room<br>
@@ -86,7 +91,7 @@ get_header(); ?>
 		                </div>
 		                <div class="col-sm-6 text-center team-page-spacing">
                             <picture>
-                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-2-290.jpg">
+                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting1-290x193.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-2-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>
 		                    <h3 class="venue-room-title">The Small Meeting Room<br />
@@ -100,7 +105,7 @@ get_header(); ?>
 		                </div>
 		                <div class="col-sm-6 text-center team-page-spacing">
 		                    <picture>
-                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/clc_door-290.jpg">
+                                <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/studio2-290x193.jpg">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/clc_door-400.jpg" class="img-responsive img-rounded img-center" alt="" />
                             </picture>  
 		                    <h3>The Studio<br />
@@ -130,7 +135,7 @@ get_header(); ?>
 		                    <p style="color: #777;">Refreshments and catering can be arranged for all events.</p>
 							</div>
 		            </div>
-		            <div class="row">
+                    <div class="row">
 		            	<div class="col-md-12"> 
 		                    <div class="spacer20"></div>
                             <div class="spacer20"></div>
@@ -162,10 +167,11 @@ get_header(); ?>
                 <div class="modal-body">
                     <div id="carousel-conf" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <!-- <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        </ol> -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-conf" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-conf" data-slide-to="1"></li>
+                            <li data-target="#carousel-conf" data-slide-to="2"></li>
+                        </ol>
 
                       <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -175,23 +181,29 @@ get_header(); ?>
                                     The Conference Room
                                 </div>
                             </div>
-                            <!-- <div class="item">
-                                <img src="http://placehold.it/600x400" alt="...">
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room2-600x400.jpg" alt="...">
                                 <div class="carousel-caption">
                                     The Conference Room
                                 </div>
-                            </div> -->
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/conference_room3-600x400.jpg" alt="...">
+                                <div class="carousel-caption">
+                                    The Conference Room
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Controls -->
-                        <!-- <a class="left carousel-control" href="#carousel-conf" role="button" data-slide="prev">
+                        <a class="left carousel-control" href="#carousel-conf" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#carousel-conf" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-                        </a> -->
+                        </a>
                     </div>
                     <div>
                         <p>This large space situated at the front of the building boasts a high gabled ceiling with original supporting beams creating an open and attractive space. The room contains a built-in projector – perfect for larger groups, conferences, seminars and events. The space can also be cleared for movement or performing arts workshops. Laptops can be provided should you require them.</p>
@@ -220,9 +232,10 @@ get_header(); ?>
                     <div id="carousel-mac" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-mac" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-mac" data-slide-to="1"></li>
+                            <li data-target="#carousel-mac" data-slide-to="2"></li>
+                            <li data-target="#carousel-mac" data-slide-to="3"></li>
                         </ol>
 
                       <!-- Wrapper for slides -->
@@ -241,6 +254,12 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/macsuite3-600x400.jpg" alt="...">
+                                <div class="carousel-caption">
+                                    The Computer Suite
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/macsuite4-600x400.jpg" alt="...">
                                 <div class="carousel-caption">
                                     The Computer Suite
                                 </div>
@@ -282,21 +301,15 @@ get_header(); ?>
                 <div class="modal-body">
                     <div id="carousel-smallMeet" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <!-- <ol class="carousel-indicators">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        </ol>
+                        </ol> -->
 
                       <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-1-600.jpg" alt="...">
-                                <div class="carousel-caption">
-                                    The Small Meeting Room
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting-2-600.jpg" alt="...">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-meeting1-600x400.jpg" alt="...">
                                 <div class="carousel-caption">
                                     The Small Meeting Room
                                 </div>
@@ -304,14 +317,14 @@ get_header(); ?>
                         </div>
 
                         <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-smallMeet" role="button" data-slide="prev">
+                        <!-- <a class="left carousel-control" href="#carousel-smallMeet" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#carousel-smallMeet" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-                        </a>
+                        </a> -->
                     </div>
                     <div>
                         <p>This meeting room is ideal for smaller groups wishing to hire a comfortable and professional space. It is a bright, quiet and modern space and can be equipped with projectors, flip charts and laptops if desired.</p>
@@ -340,13 +353,20 @@ get_header(); ?>
                     <div id="carousel-studio" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-studio" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-studio" data-slide-to="1"></li>
                         </ol>
 
                       <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/clc_door.jpg" alt="...">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/studio2-600x400.jpg" alt="...">
+                                <div class="carousel-caption">
+                                    The Studio
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/studio1-600x400.jpg" alt="...">
                                 <div class="carousel-caption">
                                     The Studio
                                 </div>
@@ -354,14 +374,14 @@ get_header(); ?>
                         </div>
 
                         <!-- Controls -->
-                        <!-- <a class="left carousel-control" href="#carousel-studio" role="button" data-slide="prev">
+                        <a class="left carousel-control" href="#carousel-studio" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                         </a>
                         <a class="right carousel-control" href="#carousel-studio" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-                        </a> -->
+                        </a>
                     </div>
                     <div>
                         <p>The studio is a medium-sized, flexible and creative space that can be used for filming and recording or as a meeting room or classroom. It’s equipped with an interactive LCD touch screen, iMac and green screen. Hire of filming equipment can be arranged. Please contact the CLC team for more information.</p>

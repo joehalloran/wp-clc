@@ -50,15 +50,12 @@ jQuery(document).ready(function($){
 
         $el = $(this);
 
+        // Remove input if more than one left, or if only one left just blank input values.
         var $numOfInputs = $el.parent('p').siblings('p').length ;
         
         if ( $numOfInputs > 0) {
 
-            $el.parent('p').remove();
-
-            // if ( $numOfInputs === 1) {
-            //     $('.material-delete-button').prop('disabled', true);
-            // }
+            $el.parent('p').remove();      
 
         } else if ( $numOfInputs === 0) {
              $el.parent('p').children('input').val('');
@@ -66,6 +63,7 @@ jQuery(document).ready(function($){
 
     });
 
+    // Add more material input boxes.
     var $inputPar = $('#ldnclc-materials').children('p').last();
     $('#material-item-more').click(function(e){
 
@@ -73,8 +71,6 @@ jQuery(document).ready(function($){
         $clone.children('.material-title').val('');
         $clone.children('.material-link').val('');
         $('#ldnclc-materials').children('p:last').after( $clone  );
-        //$('.material-delete-button').prop('disabled', false);
-        //console.log("Adding More");
 
     });
 });

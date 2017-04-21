@@ -13,14 +13,12 @@
  */
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
-
 <div id="ldnclc-materials"> 
 	<h3>Materials</h3>
 
 	<span class="help-text"><span id="link-text-help">Display text</span><span id="link-help">Link </span></span>
 	<?php
-	
+	// Loop through existing materials and display in input boxes. Note it is a loop within a loop.	
 	if ( $materials && !($materials[0] === NULL) ) {  
         foreach ($materials as $materialItem) {
             foreach ($materialItem['title'] as $key => $value) {
@@ -41,6 +39,7 @@
 				<?php
             }
         }
+    // If no items found display empty input
     } else {
     ?>
 		<p class="ldnclc-material-item">

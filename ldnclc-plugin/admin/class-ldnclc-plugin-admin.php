@@ -193,6 +193,13 @@ class Ldnclc_Plugin_Admin {
 
 	}
 
+	/**
+	 * Creates a new custom post type and taxonomy for - In school 
+	 *
+	 * @since 	1.0.0
+	 * @access 	public
+	 * @uses 	new_cpt_item() and new_taxonomy()
+	 */
 	public function new_cpt_in_school_cpd(){
 		$cptArgs = array(
 				'cap_type' => 'post',

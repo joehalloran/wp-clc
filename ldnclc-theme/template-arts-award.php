@@ -23,18 +23,18 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-10 col-md-8">
                     <p class="lead">How can digital technologies help children and young people create exciting and innovative works of art, record and reflect upon their Arts Award journey and share their experiences and skills with others?</p>
-                    <p class="lead">The CLC are delighted to be an Arts Award supporter, running workshops for children and young people from schools and other settings, as well as CPD for teachers and arts award facilitators wishing to use technology to enhance their offer.</p>
+                    <p class="lead">The CLC are delighted to be an Arts Award supporter. We run workshops for children and young people from schools and other settings, as well as CPD for teachers and arts award facilitators wishing to use technology to enhance their offer.</p>
                     <p class="lead">For further details and to arrange a session please contact Kim Morrison <a href="mailto:kmorrison@londonclc.org.uk">kmorrison@londonclc.org.uk</a></p>
                     <picture>
-                        <source media="(min-width: 1200px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/arts-award-680.jpg">
-                        <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/arts-award-560.jpg">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/arts-award-800x450.jpg" class="img-responsive services-feature-image"
-                            srcset="<?php bloginfo('stylesheet_directory'); ?>/images/arts-award-800x450.jpg 800w, 
-                                    <?php bloginfo('stylesheet_directory'); ?>/images/arts-award-680.jpg 680w,
-                                    <?php bloginfo('stylesheet_directory'); ?>/images/arts-award-560.jpg 560w,
-                                    <?php bloginfo('stylesheet_directory'); ?>/images/arts-award-400.jpg 400w"
+                        <source media="(min-width: 1200px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-680.jpg">
+                        <source media="(min-width: 768px)" srcset="<?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-560.jpg">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-800x450.jpg" class="img-responsive services-feature-image" 
+                                    srcset="<?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-800x450.jpg 800w, 
+                                    <?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-680.jpg 680w,
+                                    <?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-560.jpg 560w,
+                                    <?php bloginfo('stylesheet_directory'); ?>/images/girl-wiring-LED-cardboard-city-400.jpg 400w"
                             sizes="90vw"
-                            alt="Girl with green glitter on fingers" />
+                            alt="Girls wiring LED into cardboard city" />
                     </picture>
                     <h2>Discover: ages 5 and up</h2>
                     <ul>

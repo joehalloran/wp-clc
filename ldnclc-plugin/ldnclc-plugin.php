@@ -8,7 +8,7 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://example.com
+ * @link              http://londonclc.org.uk
  * @since             1.0.0
  * @package           ldnclc_plugin
  *
@@ -17,8 +17,8 @@
  * Plugin URI:        http://example.com/ldnclc-plugin-uri/
  * Description:       A custom plugin for London CLC that creates 4 custom content types for: pupil workshops, resources, clc based teacher cpd, and in school cpd. This also includes custom metaboxes for admin screen.
  * Version:           1.0.0
- * Author:            Your Name or Your Company
- * Author URI:        http://example.com/
+ * Author:            Joe Halloran - London CLC
+ * Author URI:        http://londonclc.org.uk
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       ldnclc-plugin

@@ -1,6 +1,6 @@
 <?php
 /**
- * The metabox-specific functionality of the plugin.
+ * The metabox-specific saving functionality of the plugin. Including data validation.
  *
  * @link 		http://example.com
  * @since 		1.0.0
@@ -49,7 +49,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	}
 	
 	/**
-	 * Saves the data from the metabox. Triggered by 'save_post'.
+	 * Saves the data from the metabox. Triggered by 'save_post' in ../includes/class-ldnclc-plugin.php -> define_metabox_save_hooks().
 	 *
 	 * @since 	1.0.0
 	 * @access 	public
@@ -67,6 +67,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	        return;
 	    }
 
+	    // Run save methods.
 	    $this->ldnclc_plugin_save_pupil_workshop_key_info( $post_id ) ;
 
 	    $this->ldnclc_plugin_save_teacher_cpd_key_info( $post_id ) ;
@@ -78,30 +79,34 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	}
 
 	/**
-	 * Saves the data from the pupil workshop key info metabox. Triggered by 'ldnclc_plugin_meta_save'.
+	 * Saves the data from the pupil workshop key info metabox. Triggered by this->ldnclc_plugin_meta_save.
 	 *
 	 * @since 	1.0.0
 	 * @access 	protected
 	 * @return 	void
 	 */
 	protected function ldnclc_plugin_save_pupil_workshop_key_info( $post_id ) {
+		// Pupil workshop code
 		if( isset( $_POST[ 'pupil-workshop-key-info-code' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-code' ]);
 			update_post_meta( $post_id, 'pupil-workshop-key-info-code', $value );
 		}
 
+		// Pupil workshop location
 		if( isset( $_POST[ 'pupil-workshop-key-info-location' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-location' ]);
 		    update_post_meta( $post_id, 'pupil-workshop-key-info-location', $value );
 		}
 
+		// Pupil workshop duration
 		if( isset( $_POST[ 'pupil-workshop-key-info-duration' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'pupil-workshop-key-info-duration' ]);
 		    update_post_meta( $post_id, 'pupil-workshop-key-info-duration', $value );
 		}
 
+		// Pupil workshop Key stage
 		if( isset( $_POST[ 'pupil-workshop-key-info-key-stage' ] ) ) {
-			// This is an array;
+			// $values is an array;
 			$values = $_POST[ 'pupil-workshop-key-info-key-stage' ];
 			foreach ($values as $key => $value) {
 				$values[$key] = sanitize_text_field($value);
@@ -120,12 +125,14 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	 */
 	protected function ldnclc_plugin_save_teacher_cpd_key_info( $post_id ) {
 		// Checks for input and saves if needed
-	
+		
+		// Teacher CPD code
 		if( isset( $_POST[ 'teacher-cpd-key-info-code' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-code' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-code', $value );
 		}
 
+		// Teacher CPD location
 		if( isset( $_POST[ 'teacher-cpd-key-info-location' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-location' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-location', $value );
@@ -136,21 +143,25 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 		    }
 		}
 
+		// Teacher CPD date
 		if( isset( $_POST[ 'teacher-cpd-key-info-date' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-date' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-date', $value );
 		}
 
+		// Teacher CPD start time
 		if( isset( $_POST[ 'teacher-cpd-key-info-start-time' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-start-time' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-start-time', $value );
 		}
 
+		// Teacher CPD end time
 		if( isset( $_POST[ 'teacher-cpd-key-info-end-time' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-end-time' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-end-time', $value );
 		}
 
+		// Teacher CPD price
 		if( isset( $_POST[ 'teacher-cpd-key-info-price' ] ) ) {
 			$value = $_POST[ 'teacher-cpd-key-info-price' ];
 			$acceptedValues = array("free", "halfday", "fullday", "extended");
@@ -159,8 +170,9 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 			}
 		}
 
+		// Teacher CPD relevant key stage
 		if( isset( $_POST[ 'teacher-cpd-key-info-key-stage' ] ) ) {
-			// This is an array!
+			// $values is an array!
 			$values = $_POST[ 'teacher-cpd-key-info-key-stage' ];
 			foreach ($values as $key => $value) {
 				$values[$key] = sanitize_text_field($value);
@@ -168,6 +180,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 	    	update_post_meta( $post_id, 'teacher-cpd-key-info-key-stage', $values );
 		}
 
+		// Teacher CPD booking link (EventBrite)
 		if( isset( $_POST[ 'teacher-cpd-key-info-booking-link' ] ) ) {
 			$value = sanitize_text_field($_POST[ 'teacher-cpd-key-info-booking-link' ]);
 		    update_post_meta( $post_id, 'teacher-cpd-key-info-booking-link', $value );
@@ -187,6 +200,7 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 		// Checks for input and saves if needed
 		
 		if( isset( $_POST[ 'ldnclc-outcomes' ] ) ) {
+			// wp_kses_post allows basic HTML for formatting
 			$value = wp_kses_post(  $_POST[ 'ldnclc-outcomes' ]  );
 		    update_post_meta( $post_id, 'ldnclc-outcomes', $value );
 		}
@@ -218,10 +232,11 @@ class Ldnclc_Plugin_Admin_Save_Metaboxes
 				
 			}
 			 
-
+			// If both input values are empty do not overrite values to NULL
 			if ( $allItemsNull ) {
 			    update_post_meta( $post_id, 'ldnclc-materials',  NULL);
 			} else {
+				// else save.
 				update_post_meta( $post_id, 'ldnclc-materials',  $materials);
 			}
 		}

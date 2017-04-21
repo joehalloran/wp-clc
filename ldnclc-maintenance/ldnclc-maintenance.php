@@ -2,7 +2,7 @@
 /*
  * Plugin Name: LdnCLC Maintenance
  * Plugin URI: https://www.londonclc.org.uk
- * Description: Displays a coming soon page for anyone who's not logged in.
+ * Description: Displays a maintenance page for anyone who's not logged in.
  * Version: 1.0
  * Author: Joe Halloran
  * Author URI: 

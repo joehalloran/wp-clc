@@ -39,7 +39,7 @@ function ldnclc_redirect() {
 		// Loop through urls to redirect if match found
 		foreach ($urlMapper as $oldUrl => $newUrl) {
 
-			$searchRange = ( ( strlen($oldUrl) +1 ) *-1 ); // generate correct search rand for substr method.	
+			$searchRange = ( ( strlen($oldUrl) +1 ) *-1 ); // generate correct search range for substr method.	
 
 			if (substr($current_url,$searchRange)==$oldUrl) {
 				trigger_error("Redirecting from {$oldUrl} to {$newUrl}: ldnclc_redirect in theme functions.php", E_USER_WARNING);
@@ -126,7 +126,7 @@ add_action( 'after_setup_theme', 'ldnclc_setup' );
 
 
 /**
- * Generates Breadcrunmbs
+ * Generates Breadcrumbs
  *
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
@@ -237,7 +237,10 @@ function ldnclc_widgets_init() {
 }
 add_action( 'widgets_init', 'ldnclc_widgets_init' );
 
-
+/**
+ * Generate page title based on page type
+ *
+ */
 function ldnclc_get_page_title() {
 	if ( is_home() && ! is_front_page() ) { 
         return single_post_title('', FALSE);
@@ -252,7 +255,7 @@ function ldnclc_get_page_title() {
     } 
     elseif ( is_404() ) {
     	return "Err... something's not right here";
-    }else {
+    } else {
         return get_the_title(); 
     } 
 }

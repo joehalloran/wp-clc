@@ -773,6 +773,10 @@ article.post {
     height: auto;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 /* wordpress default image styles */
 img.alignright {float:right; margin:0 0 1em 1em}
 img.alignleft {float:left; margin:0 1em 1em 0}
